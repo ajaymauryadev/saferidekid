@@ -8,8 +8,8 @@
     { "source": "/api/:path*", "headers": [{ "key": "Cache-Control", "value": "private, no-store" }] }
   ],
   "rewrites": [
-    { "source": "/api/live", "destination": "https://replace-with-render-host.invalid/socket.io/" },
-    { "source": "/api/:path*", "destination": "https://replace-with-render-host.invalid/api/:path*" },
+    { "source": "/api/live", "destination": "https://saferidekid.onrender.com/socket.io/" },
+    { "source": "/api/:path*", "destination": "https://saferidekid.onrender.com/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
