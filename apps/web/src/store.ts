@@ -16,18 +16,19 @@ const wait = (ms:number) => new Promise<void>(resolve => setTimeout(resolve, ms)
 export const api = createApi({ reducerPath: 'api', baseQuery: async (args:string|FetchArgs, context, extra) => {
   const method = typeof args === 'string' ? 'GET' : (args.method ?? 'GET').toUpperCase();
   const csrfAtStart = (context.getState() as RootState).auth.csrfToken;
-  let result = await rawBaseQuery(args, context, extra);
+  const request = method === 'GET' ? { ...(typeof args === 'string' ? { url: args } : args), timeout: (typeof args === 'string' ? undefined : args.timeout) ?? 10000 } : args;
+  let result = await rawBaseQuery(request, context, extra);
   // Only reads are retried. A lost mutation response may already represent a committed safety or money event.
-  for (let attempt=0; method==='GET' && attempt<2 && result.error && (result.error.status==='FETCH_ERROR' || result.error.status===502 || result.error.status===503 || result.error.status===504); attempt++) {
+  for (let attempt=0; method==='GET' && context.endpoint !== 'me' && attempt<1 && result.error && (result.error.status==='FETCH_ERROR' || result.error.status===502 || result.error.status===503 || result.error.status===504); attempt++) {
     await wait(300 * 2 ** attempt);
-    result = await rawBaseQuery(args, context, extra);
+    result = await rawBaseQuery(request, context, extra);
   }
   if (result.error?.status === 401 && csrfAtStart && (context.getState() as RootState).auth.csrfToken === csrfAtStart) {
     context.dispatch(clearAuth());
     queueMicrotask(() => context.dispatch(api.util.resetApiState()));
   }
   return result;
-}, refetchOnFocus:true, refetchOnReconnect:true, keepUnusedDataFor:30, tagTypes: ['PublicServices', 'Session', 'Customer', 'Owner', 'Driver', 'Student','Subscription','Vehicle','Fleet','Route','Calendar','Run','Leave','Location','Booking','Urgent','Payment','PaymentSettings','Notification','Enquiry','Finance','Report'], endpoints: () => ({}) });
+}, refetchOnFocus:true, refetchOnReconnect:true, keepUnusedDataFor:120, refetchOnMountOrArgChange:30, tagTypes: ['PublicServices', 'Session', 'Customer', 'Owner', 'Driver', 'Student','Subscription','Vehicle','Fleet','Route','Calendar','Run','Leave','Location','Booking','Urgent','Payment','PaymentSettings','Notification','Enquiry','Finance','Report'], endpoints: () => ({}) });
 export type FinanceFilters={from:string;to:string;page:number;q:string;vehicleId?:string;driverId?:string;status?:string;month?:string};
 export type ExpenseView={id:string;category:string;date:string;amountPaise:number;method:string;vehicleId:string|null;bookingId:string|null;tripId:string|null;note:string;proofReference:string;voidedAt:string|null;createdAt:string};
 export type FinancePage<T>={items:T[];page:number;limit:number;total:number;totalPaise?:number;summary?:Record<string,number>};
@@ -90,9 +91,9 @@ export const publicApi = api.injectEndpoints({ endpoints: (builder) => ({
 }) });
 type AuthResponse = z.infer<typeof AuthResponseSchema>;
 export const authApi = api.injectEndpoints({ endpoints: builder => ({
-  me: builder.query<AuthResponse, void>({ query: () => '/auth/me', transformResponse: (value: unknown) => AuthResponseSchema.parse(value), providesTags: ['Session'], async onQueryStarted(_arg, { dispatch, queryFulfilled }) { try { const { data } = await queryFulfilled; dispatch(setCsrfToken(data.csrfToken)); } catch { dispatch(clearAuth()); } } }),
+  me: builder.query<AuthResponse, void>({ query: () => ({ url: '/auth/me', timeout: 15000 }), transformResponse: (value: unknown) => AuthResponseSchema.parse(value), providesTags: ['Session'], async onQueryStarted(_arg, { dispatch, queryFulfilled }) { try { const { data } = await queryFulfilled; dispatch(setCsrfToken(data.csrfToken)); } catch { /* The base query handles confirmed session expiry. */ } } }),
   login: builder.mutation<AuthResponse, LoginInput>({ query: body => ({ url: '/auth/login', method: 'POST', body }), transformResponse: (value: unknown) => AuthResponseSchema.parse(value) }),
-  signup: builder.mutation<AuthResponse, SignupInput>({ query: body => ({ url: '/auth/signup', method: 'POST', body }), transformResponse: (value: unknown) => AuthResponseSchema.parse(value) }),
+  signup: builder.mutation<AuthResponse, SignupInput>({ query: body => ({ url: '/auth/signup', method: 'POST', body, timeout: 20000 }), transformResponse: (value: unknown) => AuthResponseSchema.parse(value) }),
   logout: builder.mutation<void, void>({ query: () => ({ url: '/auth/logout', method: 'POST' }), async onQueryStarted(_arg, { dispatch, queryFulfilled }) { try { await queryFulfilled; try{sessionStorage.removeItem('saferide-public-booking-draft');}catch{/* Storage is optional. */} dispatch(clearAuth()); dispatch(api.util.resetApiState()); } catch { /* Keep session state until a confirmed logout. */ } } }),
   acceptInvite: builder.mutation<{ message: string }, { token: string; password: string;acceptTerms?:boolean;acceptPrivacy?:boolean }>({ query: body => ({ url: '/auth/accept-invite', method: 'POST', body }) }),
   resetPassword: builder.mutation<{ message: string }, { token: string; password: string }>({ query: body => ({ url: '/auth/reset-password', method: 'POST', body }) }),

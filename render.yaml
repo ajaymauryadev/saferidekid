@@ -3,8 +3,8 @@ services:
     name: saferidekids-api
     runtime: node
     plan: free
-    buildCommand: npm ci --include=dev && npm run build -w @saferide/shared && npm run build -w @saferide/api
-    startCommand: node apps/api/dist/ensure-indexes.js && node apps/api/dist/server.js
+    buildCommand: npm ci --include=dev && npm run build -w @saferide/shared && npm run build -w @saferide/api && node apps/api/dist/ensure-indexes.js
+    startCommand: node apps/api/dist/server.js
     healthCheckPath: /api/ready
     envVars:
       - key: NODE_VERSION
