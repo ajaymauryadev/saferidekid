@@ -16,6 +16,6 @@ services:
       - key: SERVE_WEB_DIST
         value: "false"
       - key: WEB_ORIGIN
-        sync: false
+        value: https://saferidekid-ui-one.vercel.app
       - key: MONGODB_URI
         sync: false
