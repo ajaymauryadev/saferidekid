@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "name": "A signup and empty home",
+      "result": "PASS",
+      "detail": "Real Chromium signup; service home has no empty child card"
+    },
+    {
+      "name": "A school lifecycle and privacy",
+      "result": "PASS",
+      "detail": "Customer request, owner fee quote, customer acceptance, owner approval and child profile clicked in Chromium; route and activation persisted; other customer denied"
+    },
+    {
+      "name": "C parent and student leave",
+      "result": "PASS",
+      "detail": "Parent leave clicked in Chromium and REQUESTED; student required guardian confirmation; fixed fee unchanged"
+    },
+    {
+      "name": "D GPS consent, scope and freshness",
+      "result": "PASS",
+      "detail": "Fresh, stale, disabled; other customer and wrong role denied"
+    },
+    {
+      "name": "B run milestones and correction",
+      "result": "PASS",
+      "detail": "Driver morning start and boarding clicked in Chromium; remaining events visible to parent; original retained after reasoned owner correction"
+    },
+    {
+      "name": "E booking and payment gate",
+      "result": "PASS",
+      "detail": "Customer four-step request, owner quote, customer acceptance, payment claim, owner verification and dispatch clicked in Chromium; pending excluded, driver completed, receipt available"
+    },
+    {
+      "name": "F goods eligibility and proof",
+      "result": "PASS",
+      "detail": "Passenger vehicle denied; goods pickup and ordered delivery checkpoints persisted"
+    },
+    {
+      "name": "G public urgent",
+      "result": "PASS",
+      "detail": "Anonymous Chromium form reached owner queue; no dispatch guarantee"
+    },
+    {
+      "name": "H owner controls",
+      "result": "PASS",
+      "detail": "Phone booking and cash recorded, assigned driver revocation blocked, eligible deletion audited"
+    },
+    {
+      "name": "I session and CSRF",
+      "result": "PASS",
+      "detail": "Logout revokes session; owner-only and IDOR checks exercised"
+    },
+    {
+      "name": "J responsive smoke",
+      "result": "PASS",
+      "detail": "Owner, driver, urgent at 320/360/390/768/1024/1366/1440; reference urgent at 390/1440"
+    }
+  ],
+  "snapshots": {
+    "schoolBefore": {
+      "status": "PENDING",
+      "count": 1,
+      "children": 0
+    },
+    "schoolAfter": {
+      "status": "ACTIVE",
+      "children": 1,
+      "reservedSeats": 1
+    },
+    "runAfter": {
+      "morningEvents": 3,
+      "originalBoarded": 1,
+      "corrections": 1
+    },
+    "moneyBefore": {
+      "paymentStatus": "PENDING_VERIFICATION",
+      "verifiedPaidPaise": 0,
+      "payments": 1
+    },
+    "moneyAfter": {
+      "paymentStatus": "VERIFIED",
+      "verifiedPaidPaise": 100000,
+      "bookingStatus": "COMPLETED",
+      "balancePaise": 400000,
+      "finalVerifiedPaidPaise": 120000,
+      "finalDuePaise": 380000,
+      "ownerCollectionsPaise": 120000
+    }
+  },
+  "errors": [],
+  "db": "mongodb-memory-server replica set",
+  "origin": "http://127.0.0.1:4183"
+}

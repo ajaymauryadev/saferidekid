@@ -1,0 +1,13 @@
+# Prompt 20 owner controls
+
+The owner settings and users screens use scoped MongoDB APIs. Settings cover public identity/content, contacts, service areas, payment instructions, global and per-vehicle/service fare amounts in paise, school due day, and GPS freshness/retention. Saving a changed settings record requires a reason and writes old/new values to an audit event in the same transaction. Public homepage copy is served from configured data. New school fee agreements use the configured due day. New GPS points use configured freshness and retention.
+
+Owner users can invite a customer or driver with a one-time token, correct customer/driver contact fields, reset an account, deactivate it, or request controlled deletion. Customer activation requires the customer's own terms and privacy acknowledgement. Deletion requires `DELETE ACCOUNT`, refuses the owner and active work, revokes sessions and pending action tokens, anonymizes the User identity, and retains financial and audit records. Existing school/student, booking, payment, fleet and run correction routes continue to provide their own guarded operations.
+
+Audit events now support old/new/reference fields and reject Mongoose update/delete operations. This is application-level append-only enforcement; production deployments must also restrict direct MongoDB collection write privileges and retain backups. Existing historical audit entries cannot be retroactively populated with old/new snapshots.
+
+Verification: `npm run build`; `npx vitest run apps/api/src/owner-control.test.ts apps/api/src/auth.test.ts` (13 passed); `npx vitest run apps/api/src/tracking.test.ts apps/api/src/fees.test.ts` (9 passed). `node scripts/owner-control-visual.mjs` rendered settings and users at 1440px and 390px in Chrome, with no page overflow. Screenshots use mocked API responses solely to verify layout; DB behavior is covered by API tests.
+
+Limits requiring a later hardening pass: the configurable school reminder offsets are stored but the current reminder job still uses its existing timing. Global fare inputs are stored as policy defaults. Vehicle/service rates now have an audited owner settings editor; the older booking rate API still exists for compatibility and needs the same audit requirement. Several older owner mutation routes have action/reason audit entries but do not yet capture standardized old/new snapshots in the audit collection. Eligible identity deletion does not anonymize every personal field embedded in historical booking, school or notification documents; those records need a documented retention schedule before automated redaction. No browser session against a live MongoDB-backed deployment was run in this phase.
+
+

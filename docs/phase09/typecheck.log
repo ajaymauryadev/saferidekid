@@ -1,0 +1,16 @@
+
+> saferide@0.1.0 typecheck
+> npm run typecheck -w @saferide/shared && npm run typecheck -w @saferide/api && npm run typecheck -w @saferide/web
+
+
+> @saferide/shared@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @saferide/api@0.1.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> @saferide/web@0.1.0 typecheck
+> tsc -b --noEmit
+

@@ -1,0 +1,35 @@
+{
+  "name": "saferide",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev -w @saferide/api\" \"npm run dev -w @saferide/web\"",
+    "build": "npm run build -w @saferide/shared && npm run build -w @saferide/api && npm run build -w @saferide/web",
+    "typecheck": "npm run typecheck -w @saferide/shared && npm run typecheck -w @saferide/api && npm run typecheck -w @saferide/web",
+    "lint": "eslint apps packages",
+    "test": "vitest run",
+    "seed:dev": "npm run seed:dev -w @saferide/api",
+    "bootstrap:owner": "npm run bootstrap:owner -w @saferide/api",
+    "verify:readiness": "npm run build -w @saferide/shared && npm run build -w @saferide/api && node scripts/verify-readiness.mjs",
+    "visual:check": "node scripts/visual-check.mjs",
+    "verify:public": "npm run build && node scripts/public-e2e.mjs",
+    "verify:auth": "npm run build && node scripts/auth-e2e.mjs",
+    "db:reset": "npm run db:reset -w @saferide/api --",
+    "seed:sample": "npm run seed:sample -w @saferide/api"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "mongodb-memory-server": "^11.3.0",
+    "playwright": "^1.65.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,27 @@
+import { chromium } from 'playwright';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import mongoose from 'mongoose';
+import { spawn } from 'node:child_process';
+import { createServer } from 'node:http';
+import { mkdir } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { Business, Vehicle } from '../apps/api/dist/models.js';
+import { User } from '../apps/api/dist/auth-models.js';
+import { hashPassword } from '../apps/api/dist/auth.js';
+
+const root=process.cwd(),out=resolve(root,'docs/phase05');await mkdir(out,{recursive:true});
+const mongo=await MongoMemoryServer.create();let api,web,browser;const failures=[];let providerAvailable=true;
+const provider=createServer((req,res)=>{res.setHeader('Content-Type','application/json');if(!providerAvailable){res.statusCode=503;res.end('{}');return;}if(req.url?.startsWith('/pelias/v1/search')){res.end(JSON.stringify({features:[{geometry:{coordinates:[80,26]},properties:{confidence:0.95}}]}));return;}if(req.url?.startsWith('/openrouteservice/v2/directions/driving-car')){res.end(JSON.stringify({routes:[{summary:{distance:12000}}]}));return;}res.statusCode=404;res.end('{}');});
+await new Promise(resolve=>provider.listen(0,'127.0.0.1',resolve));const providerPort=provider.address().port;
+async function waitFor(url){for(let i=0;i<100;i++){try{if((await fetch(url)).ok)return;}catch{}await new Promise(r=>setTimeout(r,250));}throw Error(`Server unavailable: ${url}`);}
+function local(date){return new Date(date.getTime()-date.getTimezoneOffset()*60000).toISOString().slice(0,16);}
+async function fillJourney(page){await page.goto('http://127.0.0.1:5185/app/book',{waitUntil:'networkidle'});await page.getByLabel('Pickup village, street or landmark').fill('Village main square');await page.getByLabel('Destination city, village or landmark').fill('Town railway station');await page.getByRole('button',{name:'Continue'}).click();await page.getByRole('button',{name:'Continue'}).click();await page.getByLabel('Start date and time').fill(local(new Date(Date.now()+3*86400_000)));await page.getByRole('button',{name:'Continue'}).click();}
+try{
+ await mongoose.connect(mongo.getUri());const business=await Business.create({key:'primary',name:'SafeRide'});const vehicle=await Vehicle.create({businessId:business._id,name:'Family van',type:'PASSENGER_VAN',seats:7,services:['local'],active:true,legalSuitabilityConfirmed:true});business.bookingRates=[{vehicleId:String(vehicle._id),service:'local',basePaise:5000,perKmPaise:1000,perHourPaise:0,fullDayPaise:0,minimumPaise:0,roundTripMultiplier:200,nightPaise:0,waitingPerHourPaise:0,tollPaise:0,parkingPaise:0,discountPaise:0}];business.bookingRatesVersion=1;await business.save();await User.create({businessId:business._id,name:'Browser Customer',mobile:'+919100000955',role:'CUSTOMER',status:'ACTIVE',passwordHash:await hashPassword('BrowserCustomerPassword1!')});
+ api=spawn(process.execPath,['apps/api/dist/server.js'],{cwd:root,env:{...process.env,NODE_ENV:'test',MONGODB_URI:mongo.getUri(),WEB_ORIGIN:'http://127.0.0.1:5185',PORT:'4185',ORS_API_KEY:'browser-test-key',ORS_API_BASE_URL:`http://127.0.0.1:${providerPort}`},stdio:'ignore'});
+ web=spawn(process.execPath,[resolve(root,'node_modules/vite/bin/vite.js'),'--host','127.0.0.1','--port','5185','--strictPort'],{cwd:resolve(root,'apps/web'),env:{...process.env,API_ORIGIN:'http://127.0.0.1:4185'},stdio:'ignore'});
+ await Promise.all([waitFor('http://127.0.0.1:4185/api/ready'),waitFor('http://127.0.0.1:5185/')]);browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true});const page=await browser.newPage();page.on('pageerror',error=>failures.push(`page error: ${error.message}`));
+ await page.goto('http://127.0.0.1:5185/login',{waitUntil:'networkidle'});await page.getByLabel('Mobile number or email').fill('+919100000955');await page.getByLabel('Password',{exact:true}).fill('BrowserCustomerPassword1!');await page.getByRole('button',{name:'Log In'}).click();await page.waitForURL('**/app/home');
+ for(const width of [320,390,1440]){await page.setViewportSize({width,height:900});providerAvailable=true;await fillJourney(page);await page.getByText('Indicative road route estimate',{exact:false}).waitFor();if(!await page.getByText('Road distance 12.00 km',{exact:false}).isVisible())failures.push(`12 km missing at ${width}`);await page.screenshot({path:resolve(out,`estimate-${width}.png`),fullPage:true});if(await page.evaluate(()=>document.documentElement.scrollWidth)>width)failures.push(`estimate overflow ${width}`);providerAvailable=false;await fillJourney(page);await page.getByText('Distance unavailable — owner will confirm the fare.').waitFor();await page.screenshot({path:resolve(out,`fallback-${width}.png`),fullPage:true});if(await page.evaluate(()=>document.documentElement.scrollWidth)>width)failures.push(`fallback overflow ${width}`);if(width===1440){await page.getByRole('button',{name:'Book Request'}).click();await page.waitForURL('**/app/bookings/*');if(!await page.getByText('Distance unavailable — owner will confirm the fare.').isVisible())failures.push('submitted fallback booking lost honest distance state');}}
+ await page.close();if(failures.length)throw Error(failures.join('\n'));console.log('Phase 05 DB-backed browser passed: 12 km estimate and exact fallback at 320/390/1440px.');
+}finally{await browser?.close();api?.kill();web?.kill();await mongoose.disconnect();await mongo.stop();await new Promise(resolve=>provider.close(resolve));}

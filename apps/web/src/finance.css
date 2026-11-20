@@ -1,0 +1,46 @@
+.finance-page{display:grid;gap:16px}.finance-filters,.finance-form{display:flex;gap:12px;flex-wrap:wrap;align-items:end}.finance-filters label,.finance-form label{display:grid;gap:4px;min-width:150px;flex:1}.finance-filters input,.finance-form input,.finance-form select{width:100%;min-height:42px;padding:8px;border:1px solid #cbd5e1;border-radius:9px}.finance-form h2{width:100%}.finance-table{overflow-x:auto}.finance-table table{width:100%;border-collapse:collapse;min-width:750px}.finance-table th,.finance-table td{text-align:left;border-bottom:1px solid #e2e8f0;padding:10px;vertical-align:top}.finance-table td button{margin:2px}.finance-values div,.finance-print dl div{display:flex;justify-content:space-between;gap:20px;padding:6px 0;border-bottom:1px solid #e2e8f0}.finance-values dt,.finance-print dt{color:#52637d}.finance-values dd,.finance-print dd{font-weight:700;margin:0}.finance-actions,.finance-pages{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.finance-pages{justify-content:flex-end}.finance-pages button,.finance-table button,.finance-actions button{min-height:38px}.finance-dialog{position:fixed;z-index:1000;inset:0;background:#16243b99;display:grid;place-items:center;overflow:auto;padding:20px}.finance-print{background:white;width:min(720px,100%);max-height:90vh;overflow:auto;padding:32px;color:#18253b}.finance-print header{text-align:center;border-bottom:2px solid #2462c9;margin-bottom:18px}.finance-print footer{border-top:1px solid #ccd6e6;margin-top:24px;padding-top:12px;font-size:12px}@media print{.workspace .app-sidebar,.workspace .topbar,.workspace .workspace-notification,.finance-actions,.finance-pages,.finance-filters,.pill-tabs,.finance-form,.finance-table button{display:none!important}.finance-page{display:block}.finance-table{overflow:visible}.finance-table table{min-width:0;font-size:10pt}.finance-table td,.finance-table th{padding:5px}.finance-dialog{position:absolute;background:white;padding:0;overflow:visible;display:block}.finance-print{width:100%;max-height:none;border:none;overflow:visible}body:has(.finance-dialog) .workspace *{visibility:hidden}body:has(.finance-dialog) .finance-dialog,body:has(.finance-dialog) .finance-dialog *{visibility:visible}body:has(.finance-dialog) .finance-print .finance-actions{display:none}}
+
+/* Finance screens own their layout; generic cards and grid class names have no spacing. */
+.finance-page{min-width:0;max-width:1180px;margin-inline:auto;gap:18px}
+.finance-page>.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.finance-page>.page-head p{max-width:820px;margin-bottom:0}
+.finance-page .grid{display:grid;gap:14px;min-width:0}
+.finance-page .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.finance-page .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.finance-page .grid>.card{min-width:0;padding:20px}
+.finance-page .grid>.card small{display:block;color:#5d7086;font-size:12px;font-weight:700}
+.finance-page .grid>.card h2{font-size:clamp(18px,2vw,25px);margin:8px 0 0;overflow-wrap:anywhere}
+.finance-page .finance-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;padding:18px;gap:12px}
+.finance-page .finance-filters label{min-width:0;font-size:12px;font-weight:750;color:#233750}
+.finance-page .finance-filters input{min-width:0;padding:10px 12px;background:#fff}
+.finance-page .finance-form{padding:20px}
+.finance-page .finance-table{padding:0}
+.finance-page .finance-table>p{padding:18px;margin:0;color:#5d7086}
+.finance-page .finance-table th{font-size:12px;color:#536b86;background:#f7faff;white-space:nowrap}
+.finance-page .finance-table td{font-size:13px}
+.finance-page .pill-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.finance-page .pill-tabs button,.finance-page .finance-pages button,.finance-page .finance-table td>button{min-height:40px;padding:8px 12px;border:1px solid #d9e7f7;border-radius:10px;background:#fff;color:#125fd4;font-weight:750}
+.finance-page .pill-tabs button.active{background:#125fd4;color:#fff;border-color:#125fd4}
+.finance-page .finance-pages{font-size:12px;color:#5d7086}
+.finance-page .finance-pages button:disabled{opacity:.5;cursor:not-allowed}
+@media(max-width:900px){.finance-page .grid-3,.finance-page .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.finance-page .finance-filters,.finance-page .grid-3,.finance-page .grid-2{grid-template-columns:1fr}.finance-page>.page-head{align-items:flex-start}.finance-page .finance-actions{width:100%}.finance-page .finance-actions .button{flex:1}.finance-page .finance-pages{justify-content:center}}
+@media print{.finance-page{display:block;max-width:none}.finance-page .finance-table{overflow:visible}.finance-page .finance-table table{min-width:0}.finance-page .grid{gap:8px}}
+
+.school-reports>.page-head{padding:24px 26px;border:1px solid #dbe7f3;border-radius:18px;background:linear-gradient(120deg,#f7fbff,#eef7fb)}
+.school-reports>.page-head h1{margin:6px 0;font-size:clamp(25px,3vw,33px);letter-spacing:-.03em;color:#163b5e}
+.school-reports>.page-head p{color:#536c82;line-height:1.55}
+.school-reports .pill-tabs{padding:4px;border:1px solid #dce7f2;border-radius:13px;background:#f6f9fd;width:max-content;max-width:100%}
+.school-reports .pill-tabs button{border:0;background:transparent;color:#435d76;border-radius:9px;min-height:42px}
+.school-reports .pill-tabs button.active{background:#125fd4;color:#fff;box-shadow:0 3px 10px #125fd42b}
+.school-reports .grid>.card{border:1px solid #e1eaf2;box-shadow:0 4px 16px #183c6010}
+.school-reports .finance-table{border:1px solid #dce7f2;border-radius:14px}
+.school-reports .finance-table th{padding:13px 15px;letter-spacing:.02em;text-transform:none;color:#33516e}
+.school-reports .finance-table td{padding:13px 15px;color:#263e55}
+.school-reports .finance-table tbody tr:nth-child(even){background:#fafcff}
+.school-reports .report-scroll-hint{display:none;margin:0;padding:9px 14px;background:#f7faff;color:#526b85;font-size:12px}
+.school-reports .report-month{display:grid;gap:5px;width:min(220px,100%);font-size:12px;font-weight:750;color:#233750}
+.school-reports .report-month input{min-height:42px;padding:8px 12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff}
+@media(max-width:650px){.school-reports>.page-head{padding:20px}.school-reports .pill-tabs{width:100%;display:grid;grid-template-columns:1fr}.school-reports .pill-tabs button{width:100%}.school-reports .report-scroll-hint{display:block}}
+@media print{.school-reports>.page-head{padding:0;border:0;background:none}.school-reports .finance-table{border:0}.school-reports .finance-table tbody tr:nth-child(even){background:none}}
+

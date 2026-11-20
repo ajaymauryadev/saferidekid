@@ -1,0 +1,112 @@
+driver GPS uploaded 0
+driver return result Back to duty
+AFTERNOON SCHOOL RUN
+Central School Route
+
+Green School · School Van · 2026-11-17 · 1 assigned students
+
+ACTIVE
+Stop and park safely before recording a child’s status. Each update is confirmed only after the server saves it. GPS never marks boarding or drop-off.
+Return Boarded confirmed by server at 17 Nov 2026, 3:48 am.
+Refresh statusEnd Run
+ACTIVE DUTY LOCATION
+Share vehicle location
+
+Share your phone GPS with the owner and families assigned to this trip. Only while this duty is active. Keep this page open; locked phones and background tabs may stop updates.
+
+Stop sharing
+
+Location sent. Keep this page open in the foreground.
+
+Delay or incident
+
+Stop safely before sending a report to the owner.
+
+Delay
+Breakdown
+Help
+Incident
+Duty reports
+
+No incident reports recorded.
+
+Aarav
+Colony Gate
+Return Boarded
+
+Last confirmed: 17 Nov 2026, 3:48 am
+
+Show parent contact
+Home Dropped
+Event history [
+  {
+    _id: new ObjectId('6afb811fc9dc91c0b5f6e624'),
+    businessId: new ObjectId('6afb811288a29a016129ca2e'),
+    runId: new ObjectId('6afb811df862c68d4c02a0c2'),
+    childId: new ObjectId('6afb811388a29a016129ca93'),
+    action: 'RETURN_BOARDED',
+    correctedEventId: null,
+    correctedAction: null,
+    reason: null,
+    actorId: new ObjectId('6afb811388a29a016129ca85'),
+    at: 2026-11-16T22:18:07.102Z,
+    idempotencyKey: 'f8843c68-b7cb-4b95-a776-d7dcc203bd3b',
+    __v: 0
+  }
+]
+owner GPS uploaded 0
+owner return result Back to duty
+AFTERNOON SCHOOL RUN
+Owner School Route
+
+Green School · School Van · 2026-11-17 · 1 assigned students
+
+ACTIVE
+Stop and park safely before recording a child’s status. Each update is confirmed only after the server saves it. GPS never marks boarding or drop-off.
+Return Boarded confirmed by server at 17 Nov 2026, 3:48 am.
+Refresh statusEnd Run
+ACTIVE DUTY LOCATION
+Share vehicle location
+
+Share your phone GPS with the owner and families assigned to this trip. Only while this duty is active. Keep this page open; locked phones and background tabs may stop updates.
+
+Stop sharing
+
+Location sent. Keep this page open in the foreground.
+
+Delay or incident
+
+Stop safely before sending a report to the owner.
+
+Delay
+Breakdown
+Help
+Incident
+Duty reports
+
+No incident reports recorded.
+
+Meera
+Market Gate
+Return Boarded
+
+Last confirmed: 17 Nov 2026, 3:48 am
+
+Show parent contact
+Dropped Home
+Event history [
+  {
+    _id: new ObjectId('6afb8144c9dc91c0b5f6e7d2'),
+    businessId: new ObjectId('6afb811288a29a016129ca2e'),
+    runId: new ObjectId('6afb8142f862c68d4c02a0c9'),
+    childId: new ObjectId('6afb811388a29a016129ca9d'),
+    action: 'RETURN_BOARDED',
+    correctedEventId: null,
+    correctedAction: null,
+    reason: null,
+    actorId: new ObjectId('6afb811388a29a016129ca7e'),
+    at: 2026-11-16T22:18:44.416Z,
+    idempotencyKey: '7a51e004-4126-413a-be58-68174db60878',
+    __v: 0
+  }
+]

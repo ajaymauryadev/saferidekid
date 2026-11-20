@@ -1,0 +1,45 @@
+
+ RUN  v5.1.0 C:/Users/ajaym/Desktop/saferidekids
+
+{"level":30,"time":1794892764445,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":597,"msg":"request completed"}
+{"level":30,"time":1794892764969,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":504,"msg":"request completed"}
+{"level":30,"time":1794892765484,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":510,"msg":"request completed"}
+{"level":30,"time":1794892765511,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffdb/request"},"res":{"statusCode":403},"responseTime":13,"msg":"request completed"}
+{"level":30,"time":1794892765532,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffdb/request"},"res":{"statusCode":400},"responseTime":13,"msg":"request completed"}
+{"level":30,"time":1794892765592,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffdb/request"},"res":{"statusCode":201},"responseTime":52,"msg":"request completed"}
+{"level":30,"time":1794892765689,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffdb/invite"},"res":{"statusCode":201},"responseTime":86,"msg":"request completed"}
+{"level":30,"time":1794892766194,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":200},"responseTime":499,"msg":"request completed"}
+{"level":30,"time":1794892766707,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":505,"msg":"request completed"}
+{"level":30,"time":1794892766757,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/student/home"},"res":{"statusCode":200},"responseTime":43,"msg":"request completed"}
+{"level":30,"time":1794892766794,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/tracking/run/6afbe3dbfa1786b092f8ffe0?childId=6afbe3dbfa1786b092f8ffdb"},"res":{"statusCode":200},"responseTime":30,"msg":"request completed"}
+{"level":30,"time":1794892766821,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/tracking/run/6afbe3dbfa1786b092f8ffe0?childId=6afbe3dbfa1786b092f8ffde"},"res":{"statusCode":404},"responseTime":21,"msg":"request completed"}
+{"level":30,"time":1794892766843,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/tracking/sharing"},"res":{"statusCode":403},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794892766862,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves/day?childId=6afbe3dbfa1786b092f8ffde&date=2026-11-18"},"res":{"statusCode":404},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794892766883,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":404},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794892766900,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/students"},"res":{"statusCode":403},"responseTime":11,"msg":"request completed"}
+{"level":30,"time":1794892767058,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":152,"msg":"request completed"}
+{"level":30,"time":1794892767087,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afbe3defa1786b092f90057/confirm"},"res":{"statusCode":403},"responseTime":24,"msg":"request completed"}
+{"level":30,"time":1794892767109,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794892767228,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afbe3defa1786b092f90057/confirm"},"res":{"statusCode":200},"responseTime":113,"msg":"request completed"}
+{"level":30,"time":1794892767388,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":146,"msg":"request completed"}
+{"level":30,"time":1794892767464,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afbe3dffa1786b092f90095/decline"},"res":{"statusCode":200},"responseTime":72,"msg":"request completed"}
+{"level":30,"time":1794892767509,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":409},"responseTime":27,"msg":"request completed"}
+{"level":30,"time":1794892767544,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":28,"msg":"request completed"}
+{"level":30,"time":1794892767565,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":14,"msg":"request completed"}
+{"level":30,"time":1794892767613,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/communications/notices"},"res":{"statusCode":201},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794892767639,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":22,"msg":"request completed"}
+{"level":30,"time":1794892767690,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/student"},"res":{"statusCode":200},"responseTime":18,"msg":"request completed"}
+{"level":30,"time":1794892767712,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":17,"msg":"request completed"}
+{"level":30,"time":1794892767780,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffdb/revoke"},"res":{"statusCode":200},"responseTime":62,"msg":"request completed"}
+{"level":30,"time":1794892767788,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/student/home"},"res":{"statusCode":401},"responseTime":3,"msg":"request completed"}
+{"level":30,"time":1794892768262,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":468,"msg":"request completed"}
+{"level":30,"time":1794892768319,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffde/request"},"res":{"statusCode":201},"responseTime":46,"msg":"request completed"}
+{"level":30,"time":1794892768370,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffde/invite"},"res":{"statusCode":201},"responseTime":44,"msg":"request completed"}
+{"level":30,"time":1794892768411,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/student-access/6afbe3dbfa1786b092f8ffde/revoke"},"res":{"statusCode":200},"responseTime":34,"msg":"request completed"}
+{"level":30,"time":1794892768420,"pid":6312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":400},"responseTime":4,"msg":"request completed"}
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  10:49:20
+   Duration  9.35s (tests 80%, import 19%, transform 2%)
+

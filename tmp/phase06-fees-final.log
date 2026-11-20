@@ -1,0 +1,35 @@
+
+ RUN  v5.1.0 C:/Users/ajaym/Desktop/saferidekids
+
+{"level":30,"time":1794915915647,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":328,"msg":"request completed"}
+{"level":30,"time":1794915915927,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":266,"msg":"request completed"}
+{"level":30,"time":1794915916189,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":259,"msg":"request completed"}
+{"level":30,"time":1794915916229,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer?month=2026-11"},"res":{"statusCode":200},"responseTime":31,"msg":"request completed"}
+{"level":30,"time":1794915916260,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer?month=2026-11"},"res":{"statusCode":200},"responseTime":26,"msg":"request completed"}
+{"level":30,"time":1794915916281,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer?month=2026-11"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+{"level":30,"time":1794915916294,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/owner"},"res":{"statusCode":403},"responseTime":5,"msg":"request completed"}
+·{"level":30,"time":1794915916332,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/payments"},"res":{"statusCode":201},"responseTime":32,"msg":"request completed"}
+{"level":30,"time":1794915916350,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer?month=2026-11"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794915916392,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/summary"},"res":{"statusCode":200},"responseTime":38,"msg":"request completed"}
+{"level":30,"time":1794915916408,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/6afc3e4c45a03e0c91e19dd8/verify"},"res":{"statusCode":200},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794915916425,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer?month=2026-11"},"res":{"statusCode":200},"responseTime":14,"msg":"request completed"}
+{"level":30,"time":1794915916463,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/summary"},"res":{"statusCode":200},"responseTime":34,"msg":"request completed"}
+·{"level":30,"time":1794915916482,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/fees/owner/6afc3e4c45a03e0c91e19d53/adjust"},"res":{"statusCode":201},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794915916502,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/owner?month=2026-11"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794915916507,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/jobs/fees/run"},"res":{"statusCode":401},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794915916536,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/jobs/fees/run"},"res":{"statusCode":200},"responseTime":27,"msg":"request completed"}
+{"level":30,"time":1794915916564,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/jobs/fees/run"},"res":{"statusCode":200},"responseTime":26,"msg":"request completed"}
+··{"level":30,"time":1794915916578,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/fees/owner/6afc3e4c45a03e0c91e19d51/agreements"},"res":{"statusCode":201},"responseTime":10,"msg":"request completed"}
+{"level":30,"time":1794915916585,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/customer/agreements"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+{"level":30,"time":1794915916590,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/fees/customer/agreements/6afc3e4c45a03e0c91e19ef9/accept"},"res":{"statusCode":403},"responseTime":3,"msg":"request completed"}
+{"level":30,"time":1794915916598,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/fees/customer/agreements/6afc3e4c45a03e0c91e19ef9/accept"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+·{"level":30,"time":1794915916676,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/owner?month=2026-11&page=1"},"res":{"statusCode":200},"responseTime":56,"msg":"request completed"}
+{"level":30,"time":1794915916707,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/owner?month=2026-11&page=2"},"res":{"statusCode":200},"responseTime":28,"msg":"request completed"}
+{"level":30,"time":1794915916715,"pid":32312,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/fees/owner?q=.*"},"res":{"statusCode":200},"responseTime":6,"msg":"request completed"}
+··
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  17:15:12
+   Duration  5.11s (tests 66%, import 30%, transform 4%)
+

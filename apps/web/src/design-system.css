@@ -1,0 +1,178 @@
+/* Shared flat visual system for public pages and every protected workspace. */
+:root {
+  color-scheme: light;
+  --design-ink: #172b49;
+  --design-muted: #52657d;
+  --design-line: #dce5ef;
+  --design-canvas: #f5f7fb;
+  --design-blue: #125bc5;
+}
+
+*, *::before, *::after { box-shadow: none !important; text-shadow: none !important; }
+html { scroll-behavior: smooth; }
+body { background: var(--design-canvas); color: var(--design-ink); font-size: 14px; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: not-allowed; }
+h1, h2, h3 { color: var(--design-ink); line-height: 1.18; }
+p { color: var(--design-muted); line-height: 1.55; }
+.card { border: 1px solid var(--design-line); border-radius: 17px; background: #fff; }
+.button, .btn { border-radius: 10px; font-weight: 750; }
+.button:hover, .btn:hover, .service-card:hover { transform: none; }
+.button.primary { background: var(--design-blue); }
+.button.secondary { background: #eaf2fc; border-color: #d7e5f7; }
+.button.white { border-color: var(--design-line); }
+.eyebrow { letter-spacing: .07em; }
+.notice, .alert { border-radius: 12px; }
+.feature-icon, .service-icon, .empty-icon, .metric-icon { border-radius: 11px; }
+.status-pill { border-radius: 8px; }
+
+/* Public website */
+.public-header, .public-footer { background: #fff; border-color: var(--design-line); }
+.nav-inner { height: 72px; }
+.desktop-links a { color: #4c6078; }
+.hero { background: #eef5fc; border-color: #d8e7f6; border-radius: 23px; }
+.hero h1 { max-width: 610px; }
+.vehicle-hero img { filter: none; }
+.float-note { border: 1px solid var(--design-line); }
+.feature-strip > div, .service-card, .public-vehicle { border-color: var(--design-line); }
+.service-card { transition: border-color .15s, background .15s; }
+.service-card:hover { border-color: #9dbfe8; background: #fbfdff; }
+.public-cta { background: #1155b6; border-radius: 18px; }
+.login-bg { background: var(--design-canvas); }
+.login-shell { border: 1px solid var(--design-line); border-radius: 20px; }
+.login-art { background: #eaf3fc; }
+.login-art img { border-radius: 13px; }
+.login-form { padding: 44px 42px; }
+.auth-fields input:not([type=checkbox]), .form-field input, .form-field textarea {
+  border-color: #cdd9e6;
+  border-radius: 10px;
+}
+.auth-fields input:focus-visible, .form-field input:focus-visible, .form-field textarea:focus-visible {
+  outline: 2px solid #5a9be8;
+  outline-offset: 1px;
+}
+
+/* Workspace shell, including owner, customer, driver and student routes. */
+.workspace { background: var(--design-canvas); }
+.app-sidebar { border-color: var(--design-line); }
+.sidebar-brand, .sidebar-foot, .topbar { border-color: var(--design-line); }
+.sidebar-brand { padding: 22px 20px 18px; }
+.sidebar-brand img { display: none; }
+.side-link { border-radius: 9px; }
+.side-link:hover, .side-link.active { background: #eaf2fc; color: #0d55b8; }
+.topbar { min-height: 72px; height: auto; background: #fff; }
+.topbar strong { color: var(--design-ink); }
+.topbar small { color: var(--design-muted); }
+.page-body { width: 100%; }
+.page-head h1 { letter-spacing: -.025em; }
+.empty-state { padding: 32px 20px; }
+.empty-state h3 { margin-top: 12px; }
+.metric, .ride-panel, .customer-panel { border-color: var(--design-line); }
+.data-table th, .data-table td { border-color: var(--design-line); }
+.pill-tabs button { border-radius: 9px; }
+.bottom-nav { border-color: var(--design-line); }
+.bottom-nav a { align-content: center; border-radius: 10px; }
+.bottom-nav a.active { background: #eaf2fc; color: #0c58bf; }
+.quick-action, .service-tiles a, .booking-services button { border-radius: 12px; }
+.booking-list-card { border-radius: 15px; }
+.booking-step { border-radius: 17px; }
+.booking-shell > .card:not(.booking-step) { padding: 24px; }
+.booking-shell > .card:not(.booking-step) h2 { font-size: 20px; margin-bottom: 8px; }
+.booking-shell > .card:not(.booking-step) p { margin-bottom: 16px; }
+.customer-workspace .customer-panel:has(>.pill-tabs) > .card { padding: 22px; }
+.customer-workspace .customer-panel:has(>.pill-tabs) > .card h3 { font-size: 16px; margin-bottom: 8px; }
+.customer-workspace .customer-panel:has(>.pill-tabs) > .card p { font-size: 13px; }
+.customer-workspace .customer-panel:has(>.pill-tabs) > .card button + button { margin-left: 8px; }
+.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs button { border-radius: 10px !important; }
+.owner-overview-head p, .owner-panel-title p, .owner-row small,
+.owner-customer-top p, .owner-customer-dues, .owner-secondary-metrics {
+  font-size: 12px;
+}
+.owner-kpi small, .owner-kpi > span:last-child { font-size: 12px; line-height: 1.4; }
+.owner-kpi strong { font-size: 23px; }
+.owner-row strong { font-size: 13px; }
+.owner-panel-title h2 { font-size: 17px; }
+.owner-quick .button, .owner-customer-actions .button { min-height: 42px; font-size: 13px; }
+.owner-control-page .owner-settings-grid > .card,
+.owner-control-page .owner-users-grid > .card,
+.owner-control-page > .card { padding: 20px; }
+.owner-control-page .owner-settings-grid h2,
+.owner-control-page .owner-vehicle-rates h2 { font-size: 18px; margin-bottom: 16px; }
+.owner-control-page .owner-settings-fields { gap: 15px; }
+.owner-control-page .owner-settings-fields label { min-width: 0; font-size: 13px; }
+.owner-control-page input, .owner-control-page select, .owner-control-page textarea { min-height: 44px; }
+.table-scroll, .table-viewport, .finance-table { max-width: 100%; }
+
+@media (max-width: 1050px) {
+  .app-sidebar { background: #fff; }
+  .page-body { padding-inline: 20px; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 14px; }
+  .container { width: min(100% - 32px, 1280px); }
+  .nav-inner { height: 64px; }
+  .brand { font-size: 20px; }
+  .hero { padding: 23px 20px; border-radius: 17px; }
+  .hero h1 { font-size: clamp(30px, 9vw, 38px); line-height: 1.1; }
+  .section { margin-top: 38px; }
+  .section h2 { font-size: 24px; }
+  .login-bg { padding: 20px 16px 30px; min-height: auto; }
+  .login-shell { border-radius: 16px; }
+  .login-form { padding: 27px 22px; }
+  .login-form h1 { font-size: 27px; }
+  .public-footer { margin-top: 28px; padding-top: 28px; }
+  .footer-grid { gap: 22px; }
+  .topbar { min-height: 66px; padding-inline: 15px; }
+  .topbar strong { font-size: 15px; }
+  .topbar-logout { min-height: 40px; }
+  .page-body, .customer-workspace .page-body {
+    padding: 20px 16px calc(94px + env(safe-area-inset-bottom));
+  }
+  .page-head h1 { font-size: 26px; }
+  .card { border-radius: 14px; }
+  .customer-panel, .ride-panel { padding: 18px; }
+  .bottom-nav { padding: 7px 8px max(8px, env(safe-area-inset-bottom)); gap: 5px; }
+  .bottom-nav a { min-height: 53px; gap: 4px; font-size: 11px; }
+  .bottom-nav a svg { width: 20px; height: 20px; }
+  .workspace small, .workspace .eyebrow, .workspace .metric-label { font-size: 12px; }
+  .workspace input:not([type=checkbox]), .workspace select, .workspace textarea,
+  .login-form input:not([type=checkbox]), .form-field input, .form-field textarea { font-size: 16px; }
+  .customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs { gap: 8px; }
+  .customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs button {
+    border-radius: 9px; min-height: 46px; font-size: 13px;
+  }
+  .customer-workspace .customer-panel:has(>.pill-tabs) > .card { padding: 18px; }
+  .booking-shell > .card:not(.booking-step) { padding: 20px; }
+  .booking-shell > .card:not(.booking-step) h2 { font-size: 19px; }
+  .owner-overview-head h1 { font-size: 27px; }
+  .owner-quick .button { min-height: 44px; }
+  .owner-period label, .owner-period small { font-size: 12px; }
+  .owner-control-page .owner-settings-grid > .card,
+  .owner-control-page .owner-users-grid > .card,
+  .owner-control-page > .card { padding: 18px; }
+}
+
+@media (max-width: 480px) {
+  .owner-kpi { grid-template-columns: 1fr; gap: 2px; min-height: 118px; }
+  .owner-kpi-icon { display: none; }
+  .owner-kpi small { font-size: 12px; }
+  .owner-kpi strong { font-size: 22px; }
+  .owner-kpi > span:last-child { font-size: 11px; }
+}
+
+@media (max-width: 380px) {
+  .container { width: min(100% - 24px, 1280px); }
+  .page-body, .customer-workspace .page-body { padding-inline: 12px; }
+  .topbar { padding-inline: 10px; }
+  .topbar-left { gap: 6px; }
+  .topbar-logout { padding-inline: 9px; }
+  .login-bg { padding-inline: 12px; }
+  .login-form { padding-inline: 17px; }
+  .bottom-nav { padding-inline: 4px; gap: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

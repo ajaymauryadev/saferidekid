@@ -1,0 +1,65 @@
+
+ RUN  v5.1.0 C:/Users/ajaym/Desktop/saferidekids
+
+{"level":30,"time":1794896139619,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":528,"msg":"request completed"}
+{"level":30,"time":1794896140092,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":451,"msg":"request completed"}
+{"level":30,"time":1794896140551,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":453,"msg":"request completed"}
+{"level":30,"time":1794896140673,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":114,"msg":"request completed"}
+{"level":30,"time":1794896140706,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":200},"responseTime":20,"msg":"request completed"}
+{"level":30,"time":1794896140732,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6afbf10c784b0439f1b6b068"},"res":{"statusCode":404},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794896140758,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings"},"res":{"statusCode":200},"responseTime":19,"msg":"request completed"}
+{"level":30,"time":1794896140768,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings"},"res":{"statusCode":401},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794896140800,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":409},"responseTime":22,"msg":"request completed"}
+{"level":30,"time":1794896140819,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":400},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794896140837,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":400},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794896140904,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":59,"msg":"request completed"}
+{"level":30,"time":1794896140986,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10c784b0439f1b6b093/quote"},"res":{"statusCode":200},"responseTime":76,"msg":"request completed"}
+{"level":30,"time":1794896141009,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6afbf10c784b0439f1b6b093"},"res":{"statusCode":404},"responseTime":17,"msg":"request completed"}
+{"level":30,"time":1794896141031,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10c784b0439f1b6b093/accept-quote"},"res":{"statusCode":404},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794896141092,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10c784b0439f1b6b093/revision"},"res":{"statusCode":200},"responseTime":55,"msg":"request completed"}
+{"level":30,"time":1794896141156,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10c784b0439f1b6b093/quote"},"res":{"statusCode":200},"responseTime":59,"msg":"request completed"}
+{"level":30,"time":1794896141218,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10c784b0439f1b6b093/accept-quote"},"res":{"statusCode":200},"responseTime":57,"msg":"request completed"}
+{"level":30,"time":1794896141274,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10c784b0439f1b6b093/confirm"},"res":{"statusCode":409},"responseTime":50,"msg":"request completed"}
+{"level":30,"time":1794896141305,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/bookings/6afbf10c784b0439f1b6b093"},"res":{"statusCode":200},"responseTime":22,"msg":"request completed"}
+{"level":30,"time":1794896141368,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":54,"msg":"request completed"}
+{"level":30,"time":1794896141451,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10d784b0439f1b6b0ea/quote"},"res":{"statusCode":200},"responseTime":77,"msg":"request completed"}
+{"level":30,"time":1794896141524,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10d784b0439f1b6b0ea/accept-quote"},"res":{"statusCode":200},"responseTime":68,"msg":"request completed"}
+{"level":30,"time":1794896141610,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10d784b0439f1b6b0ea/confirm"},"res":{"statusCode":200},"responseTime":79,"msg":"request completed"}
+{"level":30,"time":1794896141696,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":82,"msg":"request completed"}
+{"level":30,"time":1794896141773,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10d784b0439f1b6b125/quote"},"res":{"statusCode":200},"responseTime":70,"msg":"request completed"}
+{"level":30,"time":1794896141849,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10d784b0439f1b6b125/accept-quote"},"res":{"statusCode":200},"responseTime":68,"msg":"request completed"}
+{"level":30,"time":1794896141904,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10d784b0439f1b6b125/confirm"},"res":{"statusCode":409},"responseTime":45,"msg":"request completed"}
+{"level":30,"time":1794896141989,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10d784b0439f1b6b0ea/cancel"},"res":{"statusCode":200},"responseTime":80,"msg":"request completed"}
+{"level":30,"time":1794896142081,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":74,"msg":"request completed"}
+{"level":30,"time":1794896142093,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/bookings/6afbf10e784b0439f1b6b168"},"res":{"statusCode":403},"responseTime":7,"msg":"request completed"}
+{"level":30,"time":1794896142117,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b168/quote"},"res":{"statusCode":400},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794896142181,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b168/quote"},"res":{"statusCode":200},"responseTime":59,"msg":"request completed"}
+{"level":30,"time":1794896142250,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10e784b0439f1b6b168/accept-quote"},"res":{"statusCode":200},"responseTime":63,"msg":"request completed"}
+{"level":30,"time":1794896142296,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b168/waive-advance"},"res":{"statusCode":200},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794896142348,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/bookings/6afbf10e784b0439f1b6b198"},"res":{"statusCode":404},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794896142373,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b198/reject"},"res":{"statusCode":404},"responseTime":17,"msg":"request completed"}
+{"level":30,"time":1794896142389,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6afbf10e784b0439f1b6b168"},"res":{"statusCode":404},"responseTime":11,"msg":"request completed"}
+{"level":30,"time":1794896142450,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":55,"msg":"request completed"}
+{"level":30,"time":1794896142515,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b1af/cancel"},"res":{"statusCode":409},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794896142645,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":86,"msg":"request completed"}
+{"level":30,"time":1794896142672,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings"},"res":{"statusCode":200},"responseTime":20,"msg":"request completed"}
+{"level":30,"time":1794896142729,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/estimate"},"res":{"statusCode":200},"responseTime":30,"msg":"request completed"}
+{"level":30,"time":1794896142805,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":70,"msg":"request completed"}
+{"level":30,"time":1794896142823,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b1e9/quote"},"res":{"statusCode":400},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794896142900,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10e784b0439f1b6b1e9/quote"},"res":{"statusCode":200},"responseTime":71,"msg":"request completed"}
+{"level":30,"time":1794896142917,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/estimate"},"res":{"statusCode":400},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794896142929,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"PUT","url":"/api/owner/control/rates"},"res":{"statusCode":403},"responseTime":6,"msg":"request completed"}
+{"level":30,"time":1794896142979,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"PUT","url":"/api/owner/control/rates"},"res":{"statusCode":200},"responseTime":45,"msg":"request completed"}
+{"level":30,"time":1794896143055,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":71,"msg":"request completed"}
+{"level":30,"time":1794896143081,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6afbf10e784b0439f1b6b1e9"},"res":{"statusCode":200},"responseTime":20,"msg":"request completed"}
+{"level":30,"time":1794896143149,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings"},"res":{"statusCode":201},"responseTime":38,"msg":"request completed"}
+{"level":30,"time":1794896143216,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10f784b0439f1b6b22f/quote"},"res":{"statusCode":200},"responseTime":62,"msg":"request completed"}
+{"level":30,"time":1794896143266,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/bookings/6afbf10f784b0439f1b6b22f/accept-quote"},"res":{"statusCode":200},"responseTime":43,"msg":"request completed"}
+{"level":30,"time":1794896143313,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/6afbf10f784b0439f1b6b22f/confirm"},"res":{"statusCode":409},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794896143341,"pid":11772,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/bookings/phone"},"res":{"statusCode":409},"responseTime":20,"msg":"request completed"}
+
+ Test Files  1 passed (1)
+      Tests  9 passed (9)
+   Start at  11:45:36
+   Duration  8.34s (tests 83%, import 16%, transform 1%)
+

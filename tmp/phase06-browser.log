@@ -1,0 +1,10 @@
+customer 320 320
+customer 390 390
+customer 1440 1440
+owner 320 320
+owner 390 390
+owner 1440 1440
+student 320 320
+student 390 390
+student 1440 1440
+Phase 06 money pages passed at 320, 390 and 1440px for customer, owner and student.

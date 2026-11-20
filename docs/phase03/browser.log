@@ -1,0 +1,12 @@
+/student/home 320 { scrollWidth: 320, viewport: 320 }
+/student/leave 320 { scrollWidth: 320, viewport: 320 }
+/student/notices 320 { scrollWidth: 320, viewport: 320 }
+/student/home 360 { scrollWidth: 360, viewport: 360 }
+/student/leave 360 { scrollWidth: 360, viewport: 360 }
+/student/notices 360 { scrollWidth: 360, viewport: 360 }
+/student/home 390 { scrollWidth: 390, viewport: 390 }
+/student/leave 390 { scrollWidth: 390, viewport: 390 }
+/student/notices 390 { scrollWidth: 390, viewport: 390 }
+/student/home 1440 { scrollWidth: 1440, viewport: 1440 }
+/student/leave 1440 { scrollWidth: 1440, viewport: 1440 }
+/student/notices 1440 { scrollWidth: 1440, viewport: 1440 }

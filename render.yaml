@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: saferidekids-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build -w @saferide/shared && npm run build -w @saferide/api
+    startCommand: node apps/api/dist/ensure-indexes.js && node apps/api/dist/server.js
+    healthCheckPath: /api/ready
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production
+      - key: MONGOMS_DISABLE_POSTINSTALL
+        value: "1"
+      - key: SERVE_WEB_DIST
+        value: "false"
+      - key: WEB_ORIGIN
+        sync: false
+      - key: MONGODB_URI
+        sync: false

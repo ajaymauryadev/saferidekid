@@ -1,0 +1,8 @@
+import mongoose,{Schema} from 'mongoose';
+const RunSchema=new Schema({businessId:{type:Schema.Types.ObjectId,required:true},routeId:{type:Schema.Types.ObjectId,required:true},date:{type:String,required:true},session:{type:String,enum:['morning','afternoon'],required:true},driverId:{type:Schema.Types.ObjectId,required:true},vehicleId:{type:Schema.Types.ObjectId,required:true},rosterChildIds:{type:[Schema.Types.ObjectId],default:undefined},status:{type:String,enum:['ACTIVE','COMPLETED'],default:'ACTIVE'},startedAt:{type:Date,required:true},startedBy:{type:Schema.Types.ObjectId,required:true},version:{type:Number,default:0}},{timestamps:true});
+RunSchema.index({businessId:1,routeId:1,date:1,session:1},{unique:true});
+RunSchema.index({businessId:1,date:1,driverId:1,startedAt:1});
+export const SchoolRun=mongoose.model('SchoolRun',RunSchema);
+const EventSchema=new Schema({businessId:{type:Schema.Types.ObjectId,required:true},runId:{type:Schema.Types.ObjectId,required:true},childId:{type:Schema.Types.ObjectId,required:true},action:{type:String,enum:['BOARDED','SCHOOL_REACHED','RETURN_BOARDED','HOME_DROPPED','MISSED_PICKUP','LEAVE_CONFIRMED','CORRECTION'],required:true},correctedEventId:{type:Schema.Types.ObjectId,default:null},correctedAction:{type:String,default:null},reason:{type:String,default:null},actorId:{type:Schema.Types.ObjectId,required:true},at:{type:Date,required:true},idempotencyKey:{type:String,required:true}},{timestamps:false});
+EventSchema.index({businessId:1,runId:1,childId:1,at:1});EventSchema.index({businessId:1,actorId:1,idempotencyKey:1},{unique:true});
+export const RunStudentEvent=mongoose.model('RunStudentEvent',EventSchema);

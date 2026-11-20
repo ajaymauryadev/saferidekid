@@ -1,0 +1,39 @@
+
+ RUN  v5.1.0 C:/Users/ajaym/Desktop/saferidekids
+
+{"level":30,"time":1794850410792,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":338,"msg":"request completed"}
+{"level":30,"time":1794850411119,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":320,"msg":"request completed"}
+{"level":30,"time":1794850411438,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":316,"msg":"request completed"}
+{"level":30,"time":1794850411751,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":307,"msg":"request completed"}
+{"level":30,"time":1794850412076,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":320,"msg":"request completed"}
+{"level":30,"time":1794850412127,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":46,"msg":"request completed"}
+{"level":30,"time":1794850412145,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":200},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794850412156,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+{"level":30,"time":1794850412167,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afb3e6cc8a2fe2c5bfcc513/approve"},"res":{"statusCode":409},"responseTime":7,"msg":"request completed"}
+{"level":30,"time":1794850412180,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afb3e6cc8a2fe2c5bfcc513/confirm"},"res":{"statusCode":403},"responseTime":10,"msg":"request completed"}
+{"level":30,"time":1794850412215,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afb3e6cc8a2fe2c5bfcc513/confirm"},"res":{"statusCode":200},"responseTime":32,"msg":"request completed"}
+{"level":30,"time":1794850412241,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afb3e6cc8a2fe2c5bfcc513/approve"},"res":{"statusCode":200},"responseTime":24,"msg":"request completed"}
+{"level":30,"time":1794850412256,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":409},"responseTime":12,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afa78b8c8a2fe2c5bfcc568/cancel"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":0,"msg":"request completed"}
+·{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/runs"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afa78b8c8a2fe2c5bfcc58d/cancel"},"res":{"statusCode":409},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afa78b8c8a2fe2c5bfcc58d/approve"},"res":{"statusCode":403},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afa78b8c8a2fe2c5bfcc58d/approve"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/runs/6afb3e6c1f5f25e1d7fee0a0"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794799800000,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/runs/6afb3e6c1f5f25e1d7fee0a0/events"},"res":{"statusCode":409},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794850412478,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":403},"responseTime":4,"msg":"request completed"}
+{"level":30,"time":1794850412506,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":201},"responseTime":26,"msg":"request completed"}
+{"level":30,"time":1794850412514,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":403},"responseTime":3,"msg":"request completed"}
+{"level":30,"time":1794850412522,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":404},"responseTime":4,"msg":"request completed"}
+{"level":30,"time":1794850412550,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6afb3e6cc8a2fe2c5bfcc5e5/correct"},"res":{"statusCode":200},"responseTime":25,"msg":"request completed"}
+{"level":30,"time":1794850412564,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves/day?childId=6afb3e6ac8a2fe2c5bfcc4e6&date=2026-11-17"},"res":{"statusCode":200},"responseTime":7,"msg":"request completed"}
+{"level":30,"time":1794850412575,"pid":29508,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":409},"responseTime":9,"msg":"request completed"}
+··
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  23:03:27
+   Duration  5.79s (tests 72%, import 25%, transform 3%)
+

@@ -1,0 +1,26 @@
+.owner-payment-verify,.customer-workspace .customer-panel:has(>.pill-tabs){display:grid;gap:16px;min-width:0}
+.owner-payment-verify>h1{font-size:clamp(24px,3vw,30px);margin:0}.owner-payment-verify>p{margin:-8px 0 0;font-size:14px}
+.owner-payment-verify>.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.owner-payment-verify>.grid>.card{padding:18px;font-weight:700;color:#233750}
+.owner-payment-verify>.card,.owner-payment-verify>form.card{padding:20px;min-width:0;display:grid;gap:12px}
+.owner-payment-verify>.card h2,.owner-payment-verify>form.card h2{font-size:19px;margin:0}
+.owner-payment-verify input,.owner-payment-verify select,.customer-workspace .customer-panel:has(>.pill-tabs) input,.customer-workspace .customer-panel:has(>.pill-tabs) select{width:100%;min-width:0;min-height:44px;padding:10px 12px;background:white;color:#233750;border:1px solid #cbd9e8;border-radius:12px}
+.owner-payment-verify .card>button:not(.button),.customer-workspace .customer-panel:has(>.pill-tabs) button:not(.button):not(.active){min-height:44px;padding:10px 15px;border:1px solid #d9e7f7;background:#edf5ff;color:#125fd4;border-radius:12px;font-weight:750}
+.owner-payment-verify .card>button,.owner-payment-verify .card>.button{justify-self:start}
+.owner-payment-verify>form.card label{display:flex;align-items:center;gap:8px;font-size:13px}.owner-payment-verify>form.card input[type=checkbox]{width:20px;min-height:20px;accent-color:#125fd4}
+.owner-payment-verify>.card:has(>select){grid-template-columns:minmax(0,1fr) minmax(120px,180px);align-items:center}
+.owner-payment-verify>form.card{max-width:720px}.owner-payment-verify>form.card p{margin:0}
+.owner-payment-verify>.payment-empty{border-style:dashed;text-align:center;padding:30px}.owner-payment-verify>.payment-empty h2{font-size:17px}.owner-payment-verify>.payment-empty p{font-size:13px;margin:0}
+.customer-workspace .customer-panel:has(>.pill-tabs)>.card{padding:20px}.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px}
+.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs button{white-space:nowrap;min-height:44px;padding:9px 13px;border-radius:99px;border:1px solid #d9e7f7;background:white;color:#125fd4;font-weight:750}
+.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs button.active{background:#125fd4;color:white;border-color:#125fd4}
+.customer-workspace .customer-panel:has(>.pill-tabs)>form.card{padding:20px;display:grid;gap:12px}.customer-workspace .customer-panel:has(>.pill-tabs)>form.card label{display:grid;gap:5px;font-weight:700;font-size:13px}
+@media(max-width:720px){.owner-payment-verify>.grid{grid-template-columns:1fr}.owner-payment-verify>.card:has(>select){grid-template-columns:1fr}.owner-payment-verify>.card,.owner-payment-verify>form.card{padding:17px}}
+.owner-fees-page{min-width:0}.owner-fees-page>.card{padding:18px;display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-bottom:16px}.owner-fees-page>.card label{font-size:13px;font-weight:700;display:grid;gap:5px}.owner-fees-page>.card input{min-height:44px;min-width:0;padding:9px 11px;border:1px solid #cbd9e8;border-radius:12px;background:white}.owner-fees-page>.table-viewport{width:100%;max-width:100%;overflow-x:auto;border:1px solid #e4eaf3;background:white;border-radius:16px}.owner-fees-page .data-table{min-width:700px}.owner-fees-page .data-table button{min-height:36px;padding:6px 9px;margin:2px;border:1px solid #d9e7f7;background:#edf5ff;color:#125fd4;border-radius:9px;font-weight:700}.owner-fees-page>.card:last-of-type{margin-top:12px}
+.owner-fees-page .fee-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.owner-fees-page .fee-kpis .card{display:grid;gap:8px;padding:18px;min-width:0}.owner-fees-page .fee-kpis small{color:#536b86}.owner-fees-page .fee-kpis strong{font-size:clamp(17px,2vw,23px);overflow-wrap:anywhere}
+@media(max-width:720px){.owner-fees-page .fee-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:360px){.owner-fees-page .fee-kpis{grid-template-columns:1fr}}
+.owner-fees-page>.button{display:inline-flex;margin-bottom:16px}
+@media(max-width:720px){.owner-fees-page>.card{align-items:stretch}.owner-fees-page>.card input,.owner-fees-page>.card label{width:100%}}
+@media(max-width:420px){.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.customer-workspace .customer-panel:has(>.pill-tabs) .pill-tabs button{white-space:normal}}
+

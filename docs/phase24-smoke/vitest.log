@@ -1,0 +1,320 @@
+
+> saferide@0.1.0 test
+> vitest run --reporter=dot
+
+
+ RUN  v5.1.0 C:/Users/ajaym/Desktop/saferidekids
+
+{"level":30,"time":1794427728738,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":400},"responseTime":51,"msg":"request completed"}
+x{"level":30,"time":1794427729927,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":5952,"msg":"request completed"}
+{"level":30,"time":1794427730119,"pid":30456,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2379,"msg":"request completed"}
+{"level":30,"time":1794427730470,"pid":32696,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2252,"msg":"request completed"}
+{"level":30,"time":1794427730691,"pid":22224,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2295,"msg":"request completed"}
+---------------------------------{"level":30,"time":1794427731507,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":2369,"msg":"request completed"}
+{"level":30,"time":1794427731627,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":200},"responseTime":74,"msg":"request completed"}
+----{"level":30,"time":1794427731944,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2474,"msg":"request completed"}
+{"level":30,"time":1794427732027,"pid":22328,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":2645,"msg":"request errored"}
+{"level":30,"time":1794427732069,"pid":22260,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":2635,"msg":"request errored"}
+----{"level":30,"time":1794427732178,"pid":33164,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":2656,"msg":"request errored"}
+{"level":30,"time":1794427732297,"pid":33164,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":9,"msg":"request errored"}
+{"level":30,"time":1794427732351,"pid":33164,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":19,"msg":"request errored"}
+{"level":30,"time":1794427732415,"pid":33164,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":31,"msg":"request errored"}
+{"level":30,"time":1794427732498,"pid":33164,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":15,"msg":"request errored"}
+{"level":30,"time":1794427732404,"pid":30668,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":2787,"msg":"request errored"}
+{"level":30,"time":1794427732637,"pid":30668,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":35,"msg":"request errored"}
+{"level":30,"time":1794427732530,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"PUT","url":"/api/owner/control/rates"},"res":{"statusCode":200},"responseTime":394,"msg":"request completed"}
+{"level":30,"time":1794427732734,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2867,"msg":"request completed"}
+{"level":30,"time":1794427732833,"pid":30456,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":2623,"msg":"request errored"}
+{"level":30,"time":1794427732974,"pid":30456,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":29,"msg":"request errored"}
+{"level":30,"time":1794427733059,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"PUT","url":"/api/owner/control/rates"},"res":{"statusCode":400},"responseTime":186,"msg":"request completed"}
+{"level":30,"time":1794427733071,"pid":30456,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":21,"msg":"request errored"}
+·{"level":30,"time":1794427733353,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/control/settings"},"res":{"statusCode":200},"responseTime":184,"msg":"request completed"}
+{"level":30,"time":1794427733454,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/control/settings"},"res":{"statusCode":401},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794427733864,"pid":32696,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":3308,"msg":"request errored"}
+{"level":30,"time":1794427734027,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"PUT","url":"/api/owner/control/settings"},"res":{"statusCode":200},"responseTime":454,"msg":"request completed"}
+{"level":30,"time":1794427734321,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/customers"},"res":{"statusCode":201},"responseTime":165,"msg":"request completed"}
+{"level":30,"time":1794427734357,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":400},"responseTime":16,"msg":"request completed"}
+·{"level":30,"time":1794427734116,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/logout"},"res":{"statusCode":403},"responseTime":412,"msg":"request completed"}
+{"level":30,"time":1794427734481,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/logout"},"res":{"statusCode":403},"responseTime":6,"msg":"request completed"}
+x{"level":30,"time":1794427734166,"pid":22224,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":3376,"msg":"request errored"}
+{"level":30,"time":1794427734815,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":409},"responseTime":3141,"msg":"request completed"}
+{"level":30,"time":1794427734874,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/logout"},"res":{"statusCode":204},"responseTime":119,"msg":"request completed"}
+{"level":30,"time":1794427734947,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794427735457,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":2581,"msg":"request completed"}
+{"level":30,"time":1794427736058,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":200},"responseTime":1664,"msg":"request completed"}
+{"level":30,"time":1794427736367,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1378,"msg":"request completed"}
+{"level":30,"time":1794427736691,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1209,"msg":"request completed"}
+{"level":30,"time":1794427737180,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1093,"msg":"request completed"}
+{"level":30,"time":1794427737283,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/users/6af4cb56aed3028817b7ffd6/delete"},"res":{"statusCode":400},"responseTime":56,"msg":"request completed"}
+{"level":30,"time":1794427737446,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/users/6af4cb56aed3028817b7ffd6/delete"},"res":{"statusCode":200},"responseTime":143,"msg":"request completed"}
+{"level":30,"time":1794427737456,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1078,"msg":"request completed"}
+{"level":30,"time":1794427737463,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":5,"msg":"request completed"}
+{"level":30,"time":1794427737478,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":11,"msg":"request completed"}
+··{"level":30,"time":1794427737535,"pid":19780,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at processImmediate (node:internal/timers:472:9)"},"responseTime":7899,"msg":"request errored"}
+{"level":30,"time":1794427737546,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/users/6af4cb51aed3028817b7ffa6/delete"},"res":{"statusCode":409},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794427737550,"pid":19780,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at processImmediate (node:internal/timers:472:9)"},"responseTime":7602,"msg":"request errored"}
+{"level":30,"time":1794427737554,"pid":19780,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at processImmediate (node:internal/timers:472:9)"},"responseTime":7592,"msg":"request errored"}
+{"level":30,"time":1794427737586,"pid":19780,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":500},"err":{"type":"Error","message":"failed with status code 500","stack":"Error: failed with status code 500\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":7609,"msg":"request errored"}
+{"level":30,"time":1794427737634,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/users/6af4cb59aed3028817b80003/delete"},"res":{"statusCode":404},"responseTime":56,"msg":"request completed"}
+{"level":30,"time":1794427737709,"pid":32960,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/control/users/6af4cb59aed3028817b8000a/delete"},"res":{"statusCode":409},"responseTime":37,"msg":"request completed"}
+{"level":30,"time":1794427737748,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1037,"msg":"request completed"}
+·{"level":30,"time":1794427737924,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/health"},"res":{"statusCode":200},"responseTime":5,"msg":"request completed"}
+{"level":30,"time":1794427737946,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/ready"},"res":{"statusCode":503},"err":{"type":"Error","message":"failed with status code 503","stack":"Error: failed with status code 503\n    at onResFinished (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:115:39)\n    at ServerResponse.onResponseComplete (C:\\Users\\ajaym\\Desktop\\saferidekids\\node_modules\\pino-http\\logger.js:178:14)\n    at ServerResponse.emit (node:events:520:35)\n    at onFinish (node:_http_outgoing:1026:10)\n    at callback (node:internal/streams/writable:764:21)\n    at afterWrite (node:internal/streams/writable:708:5)\n    at afterWriteTick (node:internal/streams/writable:694:10)\n    at processTicksAndRejections (node:internal/process/task_queues:89:21)"},"responseTime":1,"msg":"request errored"}
+{"level":30,"time":1794427737955,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/public/services"},"res":{"statusCode":200},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794427737969,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/unknown"},"res":{"statusCode":413},"responseTime":3,"msg":"request completed"}
+{"level":30,"time":1794427737974,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/health"},"res":{"statusCode":200},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794427737977,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/health"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+{"level":30,"time":1794427737990,"pid":17584,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/health"},"res":{"statusCode":200},"responseTime":0,"msg":"request completed"}
+······{"level":30,"time":1794427738852,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1086,"msg":"request completed"}
+·{"level":30,"time":1794427739043,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":172,"msg":"request completed"}
+{"level":30,"time":1794427739144,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":200},"responseTime":78,"msg":"request completed"}
+{"level":30,"time":1794427739190,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":200},"responseTime":34,"msg":"request completed"}
+{"level":30,"time":1794427739230,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5a733f5321000946b4/approve"},"res":{"statusCode":409},"responseTime":22,"msg":"request completed"}
+{"level":30,"time":1794427739281,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5a733f5321000946b4/confirm"},"res":{"statusCode":403},"responseTime":38,"msg":"request completed"}
+{"level":30,"time":1794427739380,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1111,"msg":"request completed"}
+·{"level":30,"time":1794427739424,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/invite-driver"},"res":{"statusCode":403},"responseTime":14,"msg":"request completed"}
+{"level":30,"time":1794427739453,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5a733f5321000946b4/confirm"},"res":{"statusCode":200},"responseTime":156,"msg":"request completed"}
+{"level":30,"time":1794427739555,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/invite-driver"},"res":{"statusCode":201},"responseTime":113,"msg":"request completed"}
+{"level":30,"time":1794427739667,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5a733f5321000946b4/approve"},"res":{"statusCode":200},"responseTime":195,"msg":"request completed"}
+{"level":30,"time":1794427739803,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":409},"responseTime":119,"msg":"request completed"}
+·{"level":30,"time":1794427740185,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":354,"msg":"request completed"}
+{"level":30,"time":1794427740528,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5b733f532100094709/cancel"},"res":{"statusCode":200},"responseTime":309,"msg":"request completed"}
+{"level":30,"time":1794427740621,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/public/business"},"res":{"statusCode":200},"responseTime":142,"msg":"request completed"}
+·{"level":30,"time":1794427740787,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":238,"msg":"request completed"}
+{"level":30,"time":1794427740789,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":403},"responseTime":135,"msg":"request completed"}
+{"level":30,"time":1794427740883,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":200},"responseTime":1295,"msg":"request completed"}
+{"level":30,"time":1794427740912,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/accept-invite"},"res":{"statusCode":400},"responseTime":10,"msg":"request completed"}
+{"level":30,"time":1794427740912,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/customers"},"res":{"statusCode":403},"responseTime":31,"msg":"request completed"}
+{"level":30,"time":1794427740927,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/public/vehicles"},"res":{"statusCode":200},"responseTime":39,"msg":"request completed"}
+·{"level":30,"time":1794427740968,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/runs"},"res":{"statusCode":200},"responseTime":173,"msg":"request completed"}
+{"level":30,"time":1794427741008,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications/count"},"res":{"statusCode":200},"responseTime":89,"msg":"request completed"}
+{"level":30,"time":1794427741123,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5c733f53210009472e/cancel"},"res":{"statusCode":409},"responseTime":109,"msg":"request completed"}
+·{"level":30,"time":1794427741184,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5c733f53210009472e/approve"},"res":{"statusCode":403},"responseTime":51,"msg":"request completed"}
+{"level":30,"time":1794427741288,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications?page=1"},"res":{"statusCode":200},"responseTime":166,"msg":"request completed"}
+{"level":30,"time":1794427741285,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":400},"responseTime":296,"msg":"request completed"}
+{"level":30,"time":1794427741607,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":200},"responseTime":669,"msg":"request completed"}
+{"level":30,"time":1794427741633,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5c733f53210009472e/approve"},"res":{"statusCode":200},"responseTime":413,"msg":"request completed"}
+·{"level":30,"time":1794427741770,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":201},"responseTime":140,"msg":"request completed"}
+{"level":30,"time":1794427741856,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/runs/6af4cb5c846c0e999d019ada"},"res":{"statusCode":200},"responseTime":183,"msg":"request completed"}
+{"level":30,"time":1794427741865,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/public/enquiries/6af4cb5d0831b17cd268be6a"},"res":{"statusCode":404},"responseTime":8,"msg":"request completed"}
+{"level":30,"time":1794427741880,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/expenses"},"res":{"statusCode":201},"responseTime":982,"msg":"request completed"}
+{"level":30,"time":1794427741901,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/enquiries"},"res":{"statusCode":401},"responseTime":1,"msg":"request completed"}
+·{"level":30,"time":1794427741942,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/notifications/seen"},"res":{"statusCode":200},"responseTime":466,"msg":"request completed"}
+{"level":30,"time":1794427741942,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":200},"responseTime":227,"msg":"request completed"}
+{"level":30,"time":1794427741981,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/runs/6af4cb5c846c0e999d019ada/events"},"res":{"statusCode":409},"responseTime":98,"msg":"request completed"}
+·{"level":30,"time":1794427741997,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":201},"responseTime":53,"msg":"request completed"}
+{"level":30,"time":1794427742049,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/notifications/6af4cb5ca0c973c80ea42e65/read"},"res":{"statusCode":404},"responseTime":79,"msg":"request completed"}
+{"level":30,"time":1794427742080,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":201},"responseTime":47,"msg":"request completed"}
+{"level":30,"time":1794427742102,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/advances"},"res":{"statusCode":200},"responseTime":171,"msg":"request completed"}
+{"level":30,"time":1794427742113,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":403},"responseTime":33,"msg":"request completed"}
+{"level":30,"time":1794427742202,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":201},"responseTime":90,"msg":"request completed"}
+{"level":30,"time":1794427742216,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/notifications/6af4cb5ca0c973c80ea42e65/read"},"res":{"statusCode":200},"responseTime":118,"msg":"request completed"}
+{"level":30,"time":1794427742252,"pid":20416,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/public/enquiries"},"res":{"statusCode":429},"responseTime":24,"msg":"request completed"}
+·{"level":30,"time":1794427742266,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":200},"responseTime":205,"msg":"request completed"}
+{"level":30,"time":1794427742271,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications/count"},"res":{"statusCode":200},"responseTime":32,"msg":"request completed"}
+·{"level":30,"time":1794427742337,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/summary"},"res":{"statusCode":200},"responseTime":156,"msg":"request completed"}
+·{"level":30,"time":1794427742358,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":401},"responseTime":36,"msg":"request completed"}
+{"level":30,"time":1794427742394,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":201},"responseTime":251,"msg":"request completed"}
+{"level":30,"time":1794427742410,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings?format=csv"},"res":{"statusCode":403},"responseTime":39,"msg":"request completed"}
+{"level":30,"time":1794427742427,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/communications/notices"},"res":{"statusCode":201},"responseTime":98,"msg":"request completed"}
+{"level":30,"time":1794427742441,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":200},"responseTime":140,"msg":"request completed"}
+{"level":30,"time":1794427742445,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves"},"res":{"statusCode":403},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794427742447,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings"},"res":{"statusCode":403},"responseTime":15,"msg":"request completed"}
+{"level":30,"time":1794427742467,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":25,"msg":"request completed"}
+{"level":30,"time":1794427742514,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":404},"responseTime":45,"msg":"request completed"}
+{"level":30,"time":1794427742527,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":28,"msg":"request completed"}
+·{"level":30,"time":1794427742546,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings?from=2026-11-12&to=2026-11-12&format=csv"},"res":{"statusCode":200},"responseTime":73,"msg":"request completed"}
+{"level":30,"time":1794427742578,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard?from=2020-01-01&to=2020-01-02"},"res":{"statusCode":200},"responseTime":118,"msg":"request completed"}
+·{"level":30,"time":1794427742611,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":26,"msg":"request completed"}
+{"level":30,"time":1794427742650,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings?from=2020-01-01&to=2020-01-02"},"res":{"statusCode":200},"responseTime":81,"msg":"request completed"}
+·{"level":30,"time":1794427742668,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/communications/enquiries"},"res":{"statusCode":403},"responseTime":18,"msg":"request completed"}
+{"level":30,"time":1794427742687,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1769,"msg":"request completed"}
+{"level":30,"time":1794427742700,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/6af4cb5e733f532100094786/correct"},"res":{"statusCode":200},"responseTime":157,"msg":"request completed"}
+{"level":30,"time":1794427742741,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/communications/enquiries"},"res":{"statusCode":200},"responseTime":50,"msg":"request completed"}
+{"level":30,"time":1794427742764,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/6af4cb5ba9d2a184fce7e4e5/reset"},"res":{"statusCode":200},"responseTime":60,"msg":"request completed"}
+{"level":30,"time":1794427742776,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings"},"res":{"statusCode":200},"responseTime":63,"msg":"request completed"}
+{"level":30,"time":1794427742794,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":8,"msg":"request completed"}
+{"level":30,"time":1794427742795,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/leaves/day?childId=6af4cb51733f532100094691&date=2026-11-13"},"res":{"statusCode":200},"responseTime":43,"msg":"request completed"}
+{"level":30,"time":1794427742816,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/communications/enquiries/6af4cb5e0a846856d829d984/handled"},"res":{"statusCode":200},"responseTime":60,"msg":"request completed"}
+·{"level":30,"time":1794427742828,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/dashboard"},"res":{"statusCode":200},"responseTime":176,"msg":"request completed"}
+{"level":30,"time":1794427742880,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/finance/reports/bookings?format=csv"},"res":{"statusCode":200},"responseTime":88,"msg":"request completed"}
+{"level":30,"time":1794427742906,"pid":3004,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves/call-in"},"res":{"statusCode":409},"responseTime":87,"msg":"request completed"}
+·{"level":30,"time":1794427742988,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/documents/invoice/6af4cb5e2739c3961d6fe2f8"},"res":{"statusCode":404},"responseTime":59,"msg":"request completed"}
+·{"level":30,"time":1794427743043,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/documents/invoice/6af4cb5c2739c3961d6fe27b"},"res":{"statusCode":403},"responseTime":22,"msg":"request completed"}
+·{"level":30,"time":1794427743103,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/customers?q=Guardian"},"res":{"statusCode":200},"responseTime":242,"msg":"request completed"}
+·{"level":30,"time":1794427743190,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/communications/notices"},"res":{"statusCode":201},"responseTime":106,"msg":"request completed"}
+{"level":30,"time":1794427743193,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/documents/invoice/6af4cb5c2739c3961d6fe27b"},"res":{"statusCode":200},"responseTime":137,"msg":"request completed"}
+{"level":30,"time":1794427743225,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications"},"res":{"statusCode":200},"responseTime":25,"msg":"request completed"}
+{"level":30,"time":1794427743260,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/customers?page=1"},"res":{"statusCode":200},"responseTime":56,"msg":"request completed"}
+{"level":30,"time":1794427743281,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/documents/invoice/6af4cb5c2739c3961d6fe27b"},"res":{"statusCode":200},"responseTime":69,"msg":"request completed"}
+·{"level":30,"time":1794427743400,"pid":19692,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/overview/customers?page=2"},"res":{"statusCode":200},"responseTime":125,"msg":"request completed"}
+{"level":30,"time":1794427743414,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/finance/documents/receipt/6af4cb5c2739c3961d6fe287"},"res":{"statusCode":200},"responseTime":117,"msg":"request completed"}
+·{"level":30,"time":1794427743689,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/finance/documents/receipt/6af4cb5c2739c3961d6fe287"},"res":{"statusCode":200},"responseTime":251,"msg":"request completed"}
+{"level":30,"time":1794427743802,"pid":27992,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/finance/documents/receipt/6af4cb5c2739c3961d6fe287"},"res":{"statusCode":404},"responseTime":36,"msg":"request completed"}
+·{"level":30,"time":1794427743917,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications?page=1"},"res":{"statusCode":200},"responseTime":35,"msg":"request completed"}
+{"level":30,"time":1794427743961,"pid":13400,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/notifications?page=2"},"res":{"statusCode":200},"responseTime":26,"msg":"request completed"}
+·{"level":30,"time":1794427744330,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":1952,"msg":"request completed"}
+{"level":30,"time":1794427744416,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/users/6af4cb5ba9d2a184fce7e4e5"},"res":{"statusCode":401},"responseTime":1,"msg":"request completed"}
+{"level":30,"time":1794427744468,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/reset-password"},"res":{"statusCode":200},"responseTime":1654,"msg":"request completed"}
+x{"level":30,"time":1794427744512,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/users/6af4cb5ba9d2a184fce7e4e5"},"res":{"statusCode":403},"responseTime":33,"msg":"request completed"}
+{"level":30,"time":1794427744531,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/reset-password"},"res":{"statusCode":400},"responseTime":18,"msg":"request completed"}
+{"level":30,"time":1794427744621,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":2029,"msg":"request completed"}
+{"level":30,"time":1794427744801,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/users/6af4cb60a9d2a184fce7e50a"},"res":{"statusCode":404},"responseTime":241,"msg":"request completed"}
+{"level":30,"time":1794427745362,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":967,"msg":"request completed"}
+{"level":30,"time":1794427745427,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/6af4cb60a9d2a184fce7e50a/reset"},"res":{"statusCode":404},"responseTime":311,"msg":"request completed"}
+{"level":30,"time":1794427745446,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":882,"msg":"request completed"}
+{"level":30,"time":1794427745456,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/owner/users/6af4cb5ba9d2a184fce7e4e5"},"res":{"statusCode":200},"responseTime":19,"msg":"request completed"}
+{"level":30,"time":1794427745465,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":811,"msg":"request completed"}
+{"level":30,"time":1794427745506,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/6af4cb5ba9d2a184fce7e4e5/deactivate"},"res":{"statusCode":200},"responseTime":43,"msg":"request completed"}
+{"level":30,"time":1794427745522,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":4,"msg":"request completed"}
+{"level":30,"time":1794427745538,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/6af4cb5aa9d2a184fce7e4d8/deactivate"},"res":{"statusCode":403},"responseTime":9,"msg":"request completed"}
+{"level":30,"time":1794427745534,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":200},"responseTime":58,"msg":"request completed"}
+··{"level":30,"time":1794427745597,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":200},"responseTime":36,"msg":"request completed"}
+·{"level":30,"time":1794427745699,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":200},"responseTime":38,"msg":"request completed"}
+{"level":30,"time":1794427745732,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/children/6af4cb61fa23e511ccaef26e/location"},"res":{"statusCode":404},"responseTime":21,"msg":"request completed"}
+{"level":30,"time":1794427745778,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/children/6af4cb61fa23e511ccaef268/location"},"res":{"statusCode":404},"responseTime":21,"msg":"request completed"}
+·{"level":30,"time":1794427745839,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":200},"responseTime":40,"msg":"request completed"}
+{"level":30,"time":1794427745858,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":404},"responseTime":13,"msg":"request completed"}
+{"level":30,"time":1794427745905,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":41,"msg":"request completed"}
+{"level":30,"time":1794427745947,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/dashboard"},"res":{"statusCode":200},"responseTime":28,"msg":"request completed"}
+{"level":30,"time":1794427745985,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":609,"msg":"request completed"}
+·{"level":30,"time":1794427746027,"pid":29524,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/leaves"},"res":{"statusCode":201},"responseTime":73,"msg":"request completed"}
+{"level":30,"time":1794427746108,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/payments"},"res":{"statusCode":400},"responseTime":23,"msg":"request completed"}
+·{"level":30,"time":1794427746172,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":616,"msg":"request completed"}
+{"level":30,"time":1794427746189,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/payments"},"res":{"statusCode":201},"responseTime":71,"msg":"request completed"}
+{"level":30,"time":1794427746228,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6af4cb613e1d79f51957cd9d"},"res":{"statusCode":200},"responseTime":31,"msg":"request completed"}
+{"level":30,"time":1794427746256,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6af4cb613e1d79f51957cd9d"},"res":{"statusCode":200},"responseTime":22,"msg":"request completed"}
+{"level":30,"time":1794427746277,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/payments"},"res":{"statusCode":200},"responseTime":16,"msg":"request completed"}
+{"level":30,"time":1794427746298,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/payments/6af4cb623e1d79f51957cdaa/receipt"},"res":{"statusCode":404},"responseTime":14,"msg":"request completed"}
+{"level":30,"time":1794427746323,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/payments"},"res":{"statusCode":200},"responseTime":18,"msg":"request completed"}
+{"level":30,"time":1794427746356,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/6af4cb623e1d79f51957cdaa/verify"},"res":{"statusCode":200},"responseTime":27,"msg":"request completed"}
+{"level":30,"time":1794427746376,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/6af4cb623e1d79f51957cdaa/verify"},"res":{"statusCode":409},"responseTime":14,"msg":"request completed"}
+{"level":30,"time":1794427746400,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6af4cb613e1d79f51957cd9d"},"res":{"statusCode":200},"responseTime":18,"msg":"request completed"}
+{"level":30,"time":1794427746432,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/payments/6af4cb623e1d79f51957cdaa/receipt"},"res":{"statusCode":200},"responseTime":27,"msg":"request completed"}
+·{"level":30,"time":1794427746479,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/record"},"res":{"statusCode":201},"responseTime":26,"msg":"request completed"}
+{"level":30,"time":1794427746512,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/6af4cb623e1d79f51957cdf8/adjust"},"res":{"statusCode":201},"responseTime":27,"msg":"request completed"}
+{"level":30,"time":1794427746536,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/customer/bookings/6af4cb613e1d79f51957cd9d"},"res":{"statusCode":200},"responseTime":19,"msg":"request completed"}
+{"level":30,"time":1794427746574,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/customer/payments"},"res":{"statusCode":201},"responseTime":32,"msg":"request completed"}
+{"level":30,"time":1794427746625,"pid":17264,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/payments/6af4cb623e1d79f51957ce18/reject"},"res":{"statusCode":200},"responseTime":45,"msg":"request completed"}
+·{"level":30,"time":1794427746782,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":603,"msg":"request completed"}
+{"level":30,"time":1794427747328,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":523,"msg":"request completed"}
+{"level":30,"time":1794427747771,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":401},"responseTime":437,"msg":"request completed"}
+{"level":30,"time":1794427748235,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":429},"responseTime":459,"msg":"request completed"}
+{"level":30,"time":1794427748242,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":429},"responseTime":1,"msg":"request completed"}
+·{"level":30,"time":1794427748257,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":200},"responseTime":8,"msg":"request completed"}
+{"level":30,"time":1794427748727,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/signup"},"res":{"statusCode":201},"responseTime":464,"msg":"request completed"}
+·{"level":30,"time":1794427748769,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/owner/users/6af4cb5aa9d2a184fce7e4d8/driver-duty"},"res":{"statusCode":200},"responseTime":33,"msg":"request completed"}
+{"level":30,"time":1794427748779,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":3,"msg":"request completed"}
+{"level":30,"time":1794427749257,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"POST","url":"/api/auth/login"},"res":{"statusCode":200},"responseTime":472,"msg":"request completed"}
+·{"level":30,"time":1794427749276,"pid":18368,"hostname":"Ajay_Maurya","req":{"method":"GET","url":"/api/auth/me"},"res":{"statusCode":401},"responseTime":3,"msg":"request completed"}
+·
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  apps/api/src/bookings.test.ts [ apps/api/src/bookings.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/bookings.test.ts:13:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/11]⎯
+
+ FAIL  apps/api/src/driver.test.ts [ apps/api/src/driver.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/driver.test.ts:12:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/11]⎯
+
+ FAIL  apps/api/src/fees.test.ts [ apps/api/src/fees.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/fees.test.ts:12:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/11]⎯
+
+ FAIL  apps/api/src/fleet.test.ts [ apps/api/src/fleet.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/fleet.test.ts:19:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/11]⎯
+
+ FAIL  apps/api/src/runs.test.ts [ apps/api/src/runs.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/runs.test.ts:18:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/11]⎯
+
+ FAIL  apps/api/src/school.test.ts [ apps/api/src/school.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/school.test.ts:17:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/11]⎯
+
+ FAIL  apps/api/src/tracking.test.ts [ apps/api/src/tracking.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/tracking.test.ts:15:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/11]⎯
+
+ FAIL  apps/api/src/urgent.test.ts [ apps/api/src/urgent.test.ts ]
+Error: Hook timed out in 10000ms.
+If this is a long-running hook, pass a timeout value as the last argument or configure it globally with "hookTimeout".
+ ❯ apps/api/src/urgent.test.ts:11:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/11]⎯
+
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  apps/api/src/auth.test.ts > one server-derived identity and private provisioning > marks production session cookies Secure
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ apps/api/src/auth.test.ts:24:3
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/11]⎯
+
+ FAIL  apps/api/src/auth.test.ts > one server-derived identity and private provisioning > registers one customer, establishes a cookie session, and rejects duplicates without echoing account details
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ apps/api/src/auth.test.ts:30:3
+     28|     expect(signup.headers['set-cookie'][0]).toMatch(/HttpOnly.*Secure.…
+     29|   });
+     30|   it('registers one customer, establishes a cookie session, and reject…
+       |   ^
+     31|     const missingConsent = await request(app).post('/api/auth/signup')…
+     32|     expect(missingConsent.status).toBe(400);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/11]⎯
+
+ FAIL  apps/api/src/auth.test.ts > one server-derived identity and private provisioning > invites a driver privately, activates once, resets with an owner-issued token and revokes sessions
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ apps/api/src/auth.test.ts:75:3
+     73|     ownerCsrf = login.body.csrfToken;
+     74|   });
+     75|   it('invites a driver privately, activates once, resets with an owner…
+       |   ^
+     76|     expect((await owner.post('/api/owner/users/invite-driver').set('Or…
+     77|     const invite = await owner.post('/api/owner/users/invite-driver').…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/11]⎯
+
+
+ Test Files  9 failed | 11 passed (20)
+      Tests  3 failed | 47 passed | 41 skipped (91)
+   Start at  01:38:36
+   Duration  33.46s (tests 78%, import 20%, transform 2%)
+

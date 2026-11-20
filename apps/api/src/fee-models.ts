@@ -1,0 +1,11 @@
+import mongoose,{Schema} from 'mongoose';
+const scope={businessId:{type:Schema.Types.ObjectId,required:true,index:true},customerId:{type:Schema.Types.ObjectId,required:true,index:true},childId:{type:Schema.Types.ObjectId,required:true,index:true}};
+const AgreementSchema=new Schema({...scope,subscriptionId:{type:Schema.Types.ObjectId,default:null},proposalVersion:{type:Number,default:null},service:{type:String,enum:['MORNING','AFTERNOON','BOTH'],default:null},version:{type:Number,required:true,min:1},monthlyFeePaise:{type:Number,required:true,min:1},effectiveDate:{type:String,required:true},dueDay:{type:Number,required:true,min:1,max:28},startPolicy:{type:String,enum:['FULL_MONTH_FROM_START','NEXT_MONTH'],required:true},prorationPolicy:{type:String,enum:['NONE'],required:true},status:{type:String,enum:['PROPOSED','ACCEPTED'],required:true},acceptedAt:{type:Date,default:null},acceptedBy:{type:Schema.Types.ObjectId,default:null},proposedBy:{type:Schema.Types.ObjectId,required:true},reason:{type:String,required:true}},{timestamps:true});
+AgreementSchema.index({businessId:1,childId:1,version:1},{unique:true});
+export const FeeAgreement=mongoose.model('FeeAgreement',AgreementSchema);
+const ChargeSchema=new Schema({...scope,agreementId:{type:Schema.Types.ObjectId,required:true},agreementVersion:{type:Number,required:true},month:{type:String,required:true},amountPaise:{type:Number,required:true,min:1},dueDate:{type:String,required:true}},{timestamps:true});
+ChargeSchema.index({businessId:1,childId:1,month:1},{unique:true});
+export const FeeCharge=mongoose.model('FeeCharge',ChargeSchema);
+const FeeAdjustmentSchema=new Schema({...scope,month:{type:String,required:true},kind:{type:String,enum:['WAIVER','DISCOUNT','CHARGE'],required:true},amountPaise:{type:Number,required:true,min:1},reason:{type:String,required:true},actorId:{type:Schema.Types.ObjectId,required:true},idempotencyKey:{type:String,required:true}},{timestamps:true});
+FeeAdjustmentSchema.index({businessId:1,idempotencyKey:1},{unique:true});
+export const FeeAdjustment=mongoose.model('FeeAdjustment',FeeAdjustmentSchema);

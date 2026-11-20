@@ -1,0 +1,11 @@
+PASS A signup and empty home Real Chromium signup; service home has no empty child card
+PASS A school lifecycle and privacy Customer request, quote acceptance and child profile clicked in Chromium; owner approval, route and activation persisted; other customer denied
+PASS C parent and student leave Parent leave clicked in Chromium and REQUESTED; student required guardian confirmation; fixed fee unchanged
+PASS D GPS consent, scope and freshness Fresh, stale, disabled; other customer and wrong role denied
+PASS B run milestones and correction Driver morning start and boarding clicked in Chromium; remaining events visible to parent; original retained after reasoned owner correction
+PASS E booking and payment gate Owner quote, customer acceptance, payment claim, owner verification and dispatch clicked in Chromium; pending excluded, driver completed, receipt available
+PASS F goods eligibility and proof Passenger vehicle denied; goods pickup and ordered delivery checkpoints persisted
+PASS G public urgent Anonymous Chromium form reached owner queue; no dispatch guarantee
+PASS H owner controls Phone booking and cash recorded, assigned driver revocation blocked, eligible deletion audited
+PASS I session and CSRF Logout revokes session; owner-only and IDOR checks exercised
+PASS J responsive smoke Owner, driver, urgent at 320/360/390/768/1024/1440; reference urgent at 390/1440

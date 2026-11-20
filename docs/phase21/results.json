@@ -1,0 +1,887 @@
+{
+  "rows": [
+    {
+      "name": "public",
+      "width": 320,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 320,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 320,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 320,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 320,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 320,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 320,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 320,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 320,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 320,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 320,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 320,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 320,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 320,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 320,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 320,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 320,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 320,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 360,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 360,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 360,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 360,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 360,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 360,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 360,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 360,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 360,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 360,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 360,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 360,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 360,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 360,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 360,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 360,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 360,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 360,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 390,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 390,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 390,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 390,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 390,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 390,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 390,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 390,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 390,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 390,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 390,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 390,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 390,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 390,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 390,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 390,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 390,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 390,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 768,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 768,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 768,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 768,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 768,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 768,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 768,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 768,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 768,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 768,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 768,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 768,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 768,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 768,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 768,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 768,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 768,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 768,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 1024,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 1024,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 1024,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 1024,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 1024,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 1024,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 1024,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 1024,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 1024,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 1024,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 1024,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 1024,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 1024,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 1024,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 1024,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 1024,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 1024,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 1024,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 1366,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 1366,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 1366,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 1366,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 1366,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 1366,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 1366,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 1366,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 1366,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 1366,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 1366,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 1366,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 1366,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 1366,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 1366,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 1366,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 1366,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 1366,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "public",
+      "width": 1440,
+      "heading": "A safer school ride. A simpler way to book your journeys.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "login",
+      "width": 1440,
+      "heading": "A familiar, simple way to stay connected.",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "urgent",
+      "width": 1440,
+      "heading": "Need urgent transport?",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-no-school",
+      "width": 1440,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "home-active",
+      "width": 1440,
+      "heading": "Hi, Customer 👋",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "subscription",
+      "width": 1440,
+      "heading": "School subscriptions",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "children",
+      "width": 1440,
+      "heading": "My Children",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "booking",
+      "width": 1440,
+      "heading": "Plan your journey",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "payments",
+      "width": 1440,
+      "heading": "Payments & Receipts",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "tracking",
+      "width": 1440,
+      "heading": "Track Aarav",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-dashboard",
+      "width": 1440,
+      "heading": "Business at a glance",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-requests",
+      "width": 1440,
+      "heading": "Requests & quotations",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-payments",
+      "width": 1440,
+      "heading": "Payment Verification",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-fees",
+      "width": 1440,
+      "heading": "Monthly Fees",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-advances",
+      "width": 1440,
+      "heading": "Advances & Invoices",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-expenses",
+      "width": 1440,
+      "heading": "Expenses",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "owner-reports",
+      "width": 1440,
+      "heading": "Reports",
+      "broken": [],
+      "buttons": 0
+    },
+    {
+      "name": "driver-today",
+      "width": 1440,
+      "heading": "My Day",
+      "broken": [],
+      "buttons": 0
+    }
+  ],
+  "failures": []
+}

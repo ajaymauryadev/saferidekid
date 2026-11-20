@@ -1,0 +1,83 @@
+import {timingSafeEqual} from 'node:crypto';
+import {Router} from 'express';
+import mongoose from 'mongoose';
+import {z} from 'zod';
+const escapeRegex=(s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+import {requireAuth,requireCsrf,requireOrigin,requireRole} from './auth.js';
+import {AuditEvent,User} from './auth-models.js';
+import {Business} from './models.js';
+import {CustomerNotice,CustomerPayment,PaymentAdjustment,SchoolChild,SchoolSubscription} from './customer-models.js';
+import {FeeAdjustment,FeeAgreement,FeeCharge} from './fee-models.js';
+
+const monthSchema=z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/),id=z.string().regex(/^[a-f\d]{24}$/i),reason=z.string().trim().min(5).max(500),money=z.number().int().positive().max(100000000);
+const bad=(res:import('express').Response,code:string,message:string,status=400)=>res.status(status).json({error:{code,message}});
+const indiaDay=()=>new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
+const monthAfter=(m:string)=>{const [y,n]=m.split('-').map(Number);return `${y+Math.floor(n/12)}-${String(n%12+1).padStart(2,'0')}`;};
+async function ensureInitial(child:InstanceType<typeof SchoolChild>){let current=await FeeAgreement.findOne({businessId:child.businessId,childId:child._id}).sort({version:-1});if(current)return;const sub=await SchoolSubscription.findOne({_id:child.subscriptionId,businessId:child.businessId,customerId:child.customerId,status:{$in:['ACTIVE','PAUSED','CANCELLED']}});if(!sub?.acceptedAt||!child.monthlyFeePaise||!child.effectiveDate)return;try{const business=await Business.findById(child.businessId).select('schoolDueDay').lean();current=await FeeAgreement.create({businessId:child.businessId,customerId:child.customerId,childId:child._id,subscriptionId:sub._id,proposalVersion:sub.quoteVersion,service:sub.service??null,version:1,monthlyFeePaise:child.monthlyFeePaise,effectiveDate:child.effectiveDate,dueDay:business?.schoolDueDay??10,startPolicy:'FULL_MONTH_FROM_START',prorationPolicy:'NONE',status:'ACCEPTED',acceptedAt:sub.acceptedAt,acceptedBy:[...sub.history].reverse().find(h=>['PROPOSAL_APPROVED','COUNTER_ACCEPTED','QUOTE_ACCEPTED'].includes(h.action))?.actorId??child.customerId,proposedBy:[...sub.history].reverse().find(h=>['COUNTER_OFFERED','QUOTE_SENT','OWNER_ASSISTED_PROPOSAL','CUSTOMER_PROPOSED'].includes(h.action))?.actorId??sub.customerId,reason:'Accepted school subscription and approved child fee'});}catch(e){if(!(e instanceof mongoose.mongo.MongoServerError&&e.code===11000))throw e;}}
+export async function catchUp(child:InstanceType<typeof SchoolChild>,through:string){await ensureInitial(child);const agreements=await FeeAgreement.find({businessId:child.businessId,childId:child._id,status:'ACCEPTED'}).sort({version:1});if(!agreements.length)return;let month=agreements[0].effectiveDate.slice(0,7);if(agreements[0].startPolicy==='NEXT_MONTH'&&agreements[0].effectiveDate.slice(8)!=='01')month=monthAfter(month);const sub=await SchoolSubscription.findOne({_id:child.subscriptionId,businessId:child.businessId}).select('status updatedAt').lean();let guard=0;while(month<=through&&guard++<240){const eligible=agreements.filter(a=>a.effectiveDate.slice(0,7)<month||(a.effectiveDate.slice(0,7)===month&&(a.startPolicy==='FULL_MONTH_FROM_START'||a.effectiveDate.slice(8)==='01')));const active=eligible.at(-1);if(active&&(!sub||!['CANCELLED','PAUSED'].includes(sub.status)||month<sub.updatedAt.toISOString().slice(0,7))){try{await FeeCharge.updateOne({businessId:child.businessId,childId:child._id,month},{$setOnInsert:{businessId:child.businessId,customerId:child.customerId,childId:child._id,agreementId:active._id,agreementVersion:active.version,month,amountPaise:active.monthlyFeePaise,dueDate:`${month}-${String(active.dueDay).padStart(2,'0')}`}}, {upsert:true});}catch(e){if(!(e instanceof mongoose.mongo.MongoServerError&&e.code===11000))throw e;}}month=monthAfter(month);}}
+export async function statement(child:InstanceType<typeof SchoolChild>,month:string){
+ const {netAllocations}=await import('./finance.js');
+ await catchUp(child,month>indiaDay().slice(0,7)?indiaDay().slice(0,7):month);
+ const [charges,payments,adjustments]=await Promise.all([FeeCharge.find({businessId:child.businessId,childId:child._id,month:{$lte:month}}).sort({month:1}).lean(),CustomerPayment.find({businessId:child.businessId,customerId:child.customerId,status:{$in:['VERIFIED','PENDING_VERIFICATION']},'allocations.targetId':child._id}).lean(),FeeAdjustment.find({businessId:child.businessId,childId:child._id,month:{$lte:month}}).lean()]);
+ const refunds=await PaymentAdjustment.find({businessId:child.businessId,customerId:child.customerId,paymentId:{$in:payments.map(p=>p._id)},kind:{$in:['REFUND','REVERSAL']}}).lean();
+ const byMonth=(m:string)=>{const billed=charges.filter(c=>c.month===m).reduce((n,c)=>n+c.amountPaise,0),feeAdj=adjustments.filter(a=>a.month===m).reduce((n,a)=>n+(a.kind==='CHARGE'?a.amountPaise:-a.amountPaise),0);const related=payments.map(p=>({status:p.status,amount:netAllocations(p,p.status==='VERIFIED'?refunds.filter(a=>String(a.paymentId)===String(p._id)).reduce((v,a)=>v+a.amountPaise,0):0).filter(a=>a.kind==='SCHOOL_FEE'&&a.targetId===String(child._id)&&a.month===m).reduce((n,a)=>n+a.netPaise,0)}));return {billedPaise:billed,adjustmentPaise:feeAdj,verifiedPaise:related.filter(x=>x.status==='VERIFIED').reduce((n,x)=>n+x.amount,0),pendingPaise:related.filter(x=>x.status==='PENDING_VERIFICATION').reduce((n,x)=>n+x.amount,0)};};
+ const current=byMonth(month),previous=charges.filter(c=>c.month<month).reduce((n,c)=>{const x=byMonth(c.month);return n+x.billedPaise+x.adjustmentPaise-x.verifiedPaise;},0),net=current.billedPaise+current.adjustmentPaise-current.verifiedPaise;const charge=charges.find(c=>c.month===month),agreement=charge?await FeeAgreement.findOne({_id:charge.agreementId,businessId:child.businessId}).lean():null;return {childId:String(child._id),customerId:String(child.customerId),name:child.name,month,status:child.status,agreementVersion:charge?.agreementVersion??null,dueDay:charge?Number(charge.dueDate.slice(8)):null,dueDate:charge?.dueDate??null,startPolicy:agreement?.startPolicy??null,prorationPolicy:agreement?.prorationPolicy??null,...current,previousDuePaise:Math.max(0,previous),previousCreditPaise:Math.max(0,-previous),duePaise:Math.max(0,net+previous),creditPaise:Math.max(0,-net-previous)};
+}
+export async function reminders(businessId:mongoose.Types.ObjectId,customerId?:mongoose.Types.ObjectId,at=indiaDay()){
+ const now=at,month=now.slice(0,7),business=await Business.findById(businessId).select('schoolReminderDays').lean();
+ const offsets=[...new Set((business?.schoolReminderDays??[7,3,1,0]).filter(n=>Number.isInteger(n)&&n>=0&&n<=28))].sort((a,b)=>a-b);
+ const children=await SchoolChild.find({businessId,status:'ACTIVE',...(customerId?{customerId}:{})});let count=0;
+ for(const child of children){
+  const current=await statement(child,month);
+  for(const billingMonth of [month,monthAfter(month)]){
+   let dueDate=billingMonth===month?current.dueDate:null;
+   let duePaise=billingMonth===month?current.duePaise:0;
+   if(billingMonth!==month){
+    // The next month's lead times can fall in this month. Preview its accepted
+    // agreement without creating a charge before that service month starts.
+    const subscription=await SchoolSubscription.findOne({_id:child.subscriptionId,businessId}).select('status').lean();
+    if(subscription?.status==='PAUSED'||subscription?.status==='CANCELLED')continue;
+    const agreements=await FeeAgreement.find({businessId,childId:child._id,status:'ACCEPTED'}).sort({version:-1}).lean();
+    const agreement=agreements.find(a=>a.effectiveDate.slice(0,7)<billingMonth||(a.effectiveDate.slice(0,7)===billingMonth&&(a.startPolicy==='FULL_MONTH_FROM_START'||a.effectiveDate.slice(8)==='01')));
+    if(agreement){dueDate=`${billingMonth}-${String(agreement.dueDay).padStart(2,'0')}`;duePaise=Math.max(0,agreement.monthlyFeePaise+current.duePaise-current.creditPaise);}
+   }
+   if(!dueDate||duePaise<=0)continue;
+   const days=Math.round((Date.parse(`${dueDate}T00:00:00+05:30`)-Date.parse(`${now}T00:00:00+05:30`))/86400000);
+   if(billingMonth!==month&&days<0)continue;
+   const offset=offsets.find(n=>n>=days);if(offset===undefined)continue;
+  const users=await User.find({businessId,$or:[{_id:child.customerId,role:'CUSTOMER'},{studentProfileId:child._id,role:'STUDENT'}],status:'ACTIVE'}).select('_id role feeRemindersEnabled').lean();
+  for(const user of users){
+   if(user.feeRemindersEnabled===false)continue;
+   const body=user.role==='STUDENT'?`Please remind your parent or guardian to review the school transport fee.`:`${child.name}: ${billingMonth} school transport fee is due ${dueDate}. Remaining balance ₹${(duePaise/100).toFixed(2)} (including previous dues and verified credit). Open Payments to review or contact the owner.`;
+   const key=`fee:${child._id}:${billingMonth}:${offset}:${user._id}:${duePaise}`;
+   try{await CustomerNotice.create({businessId,customerId:user.role==='CUSTOMER'?user._id:null,studentUserId:user.role==='STUDENT'?user._id:null,reminderKey:key,title:'School fee reminder',body});count++;}
+   catch(e){if(!(e instanceof mongoose.mongo.MongoServerError&&e.code===11000))throw e;}
+  }
+  }
+ }
+ return {created:count};
+}
+export function createFeeRouter(origin:string){const r=Router();r.use(requireOrigin(origin),requireAuth);r.get('/customer',requireRole('CUSTOMER'),async(req,res,next)=>{try{const month=monthSchema.safeParse(req.query.month).success?String(req.query.month):indiaDay().slice(0,7),u=req.auth!.user,children=await SchoolChild.find({businessId:u.businessId,customerId:u._id,status:{$in:['ACTIVE','INACTIVE','APPROVED']}});const rows=await Promise.all(children.map(c=>statement(c,month)));void reminders(u.businessId,u._id).catch(()=>{});return res.json({month,items:rows,totals:rows.reduce((n,s)=>({billedPaise:n.billedPaise+s.billedPaise,verifiedPaise:n.verifiedPaise+s.verifiedPaise,pendingPaise:n.pendingPaise+s.pendingPaise,duePaise:n.duePaise+s.duePaise,creditPaise:n.creditPaise+s.creditPaise,previousDuePaise:n.previousDuePaise+s.previousDuePaise}),{billedPaise:0,verifiedPaise:0,pendingPaise:0,duePaise:0,creditPaise:0,previousDuePaise:0})});}catch(e){return next(e);}});
+ r.get('/customer/agreements',requireRole('CUSTOMER'),async(req,res,next)=>{try{const u=req.auth!.user,rows=await FeeAgreement.find({businessId:u.businessId,customerId:u._id,status:'PROPOSED'}).sort({createdAt:-1}).lean();return res.json(rows.map(a=>({id:String(a._id),childId:String(a.childId),version:a.version,monthlyFeePaise:a.monthlyFeePaise,effectiveDate:a.effectiveDate,dueDay:a.dueDay,startPolicy:a.startPolicy})));}catch(e){return next(e);}});
+ r.get('/student',requireRole('STUDENT'),async(req,res,next)=>{try{const u=req.auth!.user;if(!u.studentProfileId)return bad(res,'NOT_FOUND','Student profile not linked.',404);const notices=await CustomerNotice.find({businessId:u.businessId,studentUserId:u._id,title:'School fee reminder'}).sort({createdAt:-1}).limit(30).lean();return res.json(notices.map(n=>({id:String(n._id),title:n.title,body:'Please ask your guardian to review this month’s school transport fee.',createdAt:n.createdAt.toISOString()})));}catch(e){return next(e);}});
+ r.put('/reminder-preference',requireRole('CUSTOMER','STUDENT'),requireCsrf,async(req,res,next)=>{const p=z.object({enabled:z.boolean()}).safeParse(req.body);if(!p.success)return bad(res,'VALIDATION_ERROR','Choose reminder preference.');try{await User.updateOne({_id:req.auth!.user._id,businessId:req.auth!.user.businessId},{$set:{feeRemindersEnabled:p.data.enabled}});return res.json(p.data);}catch(e){return next(e);}});
+ r.get('/owner',requireRole('OWNER'),async(req,res,next)=>{try{
+  const parsed=z.object({month:monthSchema.optional(),page:z.coerce.number().int().min(1).max(10000).default(1),q:z.string().trim().max(80).default('')}).safeParse(req.query);
+  if(!parsed.success)return bad(res,'VALIDATION_ERROR','Check fee filters.');
+  const {page,q}=parsed.data,month=parsed.data.month??indiaDay().slice(0,7),businessId=req.auth!.user.businessId,limit=20;
+  const escaped=escapeRegex(q);
+  const where={businessId,status:{$in:['ACTIVE','INACTIVE','APPROVED']},...(q?{$or:[{name:{$regex:escaped,$options:'i'}},...(id.safeParse(q).success?[{customerId:q}]:[])]}:{})};
+  const [children,total]=await Promise.all([SchoolChild.find(where).sort({name:1,_id:1}).skip((page-1)*limit).limit(limit),SchoolChild.countDocuments(where)]);
+  const items=await Promise.all(children.map(c=>statement(c,month)));
+  return res.json({month,items,page,limit,total});
+ }catch(e){return next(e);}});
+ r.post('/owner/:childId/agreements',requireRole('OWNER'),requireCsrf,async(req,res,next)=>{const p=z.object({monthlyFeePaise:money,effectiveDate:z.iso.date(),dueDay:z.number().int().min(1).max(28),startPolicy:z.enum(['FULL_MONTH_FROM_START','NEXT_MONTH']),reason}).safeParse(req.body);if(!p.success||!id.safeParse(req.params.childId).success)return bad(res,'VALIDATION_ERROR','Check agreement.');try{const u=req.auth!.user,child=await SchoolChild.findOne({_id:req.params.childId,businessId:u.businessId,status:{$in:['ACTIVE','APPROVED']}});if(!child)return bad(res,'NOT_FOUND','Student not found.',404);await ensureInitial(child);const latest=await FeeAgreement.findOne({businessId:u.businessId,childId:child._id}).sort({version:-1});if(latest&&p.data.effectiveDate.slice(0,7)<=indiaDay().slice(0,7))return bad(res,'FUTURE_ONLY','A revised fixed fee must start in a future month. Use an audited adjustment for a billed month.');const a=await FeeAgreement.create({businessId:u.businessId,customerId:child.customerId,childId:child._id,version:(latest?.version??0)+1,...p.data,prorationPolicy:'NONE',status:'PROPOSED',proposedBy:u._id});await AuditEvent.create({businessId:u.businessId,actorId:u._id,targetId:a._id,action:'FEE_AGREEMENT_PROPOSED',reason:p.data.reason});return res.status(201).json({id:String(a._id),version:a.version,status:a.status});}catch(e){return next(e);}});
+ r.post('/customer/agreements/:id/accept',requireRole('CUSTOMER'),requireCsrf,async(req,res,next)=>{try{const u=req.auth!.user,a=id.safeParse(req.params.id).success?await FeeAgreement.findOneAndUpdate({_id:req.params.id,businessId:u.businessId,customerId:u._id,status:'PROPOSED'},{$set:{status:'ACCEPTED',acceptedAt:new Date(),acceptedBy:u._id}},{new:true}):null;if(!a)return bad(res,'NOT_FOUND','Proposed agreement not found.',404);await AuditEvent.create({businessId:u.businessId,actorId:u._id,targetId:a._id,action:'FEE_AGREEMENT_ACCEPTED',reason:'Customer accepted fixed monthly agreement'});return res.json({id:String(a._id),status:a.status});}catch(e){return next(e);}});
+ r.post('/owner/:childId/adjust',requireRole('OWNER'),requireCsrf,async(req,res,next)=>{const p=z.object({month:monthSchema,kind:z.enum(['WAIVER','DISCOUNT','CHARGE']),amountPaise:money,reason,idempotencyKey:z.uuid()}).safeParse(req.body);if(!p.success||!id.safeParse(req.params.childId).success)return bad(res,'VALIDATION_ERROR','Check fee adjustment.');try{const u=req.auth!.user,child=await SchoolChild.findOne({_id:req.params.childId,businessId:u.businessId});if(!child)return bad(res,'NOT_FOUND','Student not found.',404);if(p.data.month>indiaDay().slice(0,7))return bad(res,'UNBILLED_MONTH','Future months cannot be adjusted before billing.');await catchUp(child,p.data.month);if(!await FeeCharge.exists({businessId:u.businessId,childId:child._id,month:p.data.month}))return bad(res,'UNBILLED_MONTH','The selected month has no approved charge.');const old=await FeeAdjustment.findOne({businessId:u.businessId,idempotencyKey:p.data.idempotencyKey});if(old)return res.json({id:String(old._id)});const a=await FeeAdjustment.create({businessId:u.businessId,customerId:child.customerId,childId:child._id,actorId:u._id,...p.data});await AuditEvent.create({businessId:u.businessId,actorId:u._id,targetId:a._id,action:`FEE_${p.data.kind}`,reason:p.data.reason});return res.status(201).json({id:String(a._id)});}catch(e){return next(e);}});return r;}
+export function createFeeJobRouter(){const r=Router();r.post('/run',async(req,res,next)=>{const secret=process.env.FEE_JOB_TOKEN,provided=req.get('x-job-token');if(!secret||!provided||secret.length!==provided.length||!timingSafeEqual(Buffer.from(secret),Buffer.from(provided)))return bad(res,'UNAUTHORIZED','Job token required.',401);try{const businesses=await SchoolChild.distinct('businessId',{status:'ACTIVE'});let created=0;for(const businessId of businesses){created+=(await reminders(businessId)).created;}return res.json({created});}catch(e){return next(e);}});return r;}
+
+
+
+
+
+

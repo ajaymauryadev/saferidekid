@@ -1,0 +1,52 @@
+
+> saferide@0.1.0 build
+> npm run build -w @saferide/shared && npm run build -w @saferide/api && npm run build -w @saferide/web
+
+
+> @saferide/shared@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @saferide/api@0.1.0 build
+> tsc -p tsconfig.json
+
+
+> @saferide/web@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+../../node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 1864 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                           0.59 kB │ gzip:   0.38 kB
+dist/assets/urgent-pages-DgwbaJON.css    18.95 kB │ gzip:   7.44 kB
+dist/assets/index-BrThLGxx.css           53.44 kB │ gzip:  11.57 kB
+dist/assets/workspace-DF06Dsfq.css       53.80 kB │ gzip:  10.12 kB
+dist/assets/arrow-right-T0oOS9w2.js       0.17 kB │ gzip:   0.16 kB
+dist/assets/clock-3-CiMIYtjG.js           0.24 kB │ gzip:   0.20 kB
+dist/assets/map-pin-DPbnlvnZ.js           0.26 kB │ gzip:   0.22 kB
+dist/assets/send-CZ3EDdpD.js              0.29 kB │ gzip:   0.23 kB
+dist/assets/package-XxVDvNyn.js           0.57 kB │ gzip:   0.36 kB
+dist/assets/users-round-Dp6-ue7B.js       0.86 kB │ gzip:   0.52 kB
+dist/assets/urgent-pages-PkwpBP4J.js     13.86 kB │ gzip:   5.14 kB
+dist/assets/auth-pages-C8U1l8AI.js       16.54 kB │ gzip:   4.79 kB
+dist/assets/public-pages-BmlhYAst.js     17.88 kB │ gzip:   5.52 kB
+dist/assets/public-premium-3P9JTL6M.js   18.54 kB │ gzip:   5.97 kB
+dist/assets/zod-DJdHBP2h.js              38.01 kB │ gzip:  13.68 kB
+dist/assets/leaflet-src-DA_roqF7.js     149.90 kB │ gzip:  43.48 kB
+dist/assets/workspace-CuM4lio6.js       270.67 kB │ gzip:  66.34 kB
+dist/assets/index-DX2sYDAS.js           498.06 kB │ gzip: 153.42 kB
+✓ built in 5.73s

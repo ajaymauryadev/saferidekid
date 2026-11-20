@@ -1,0 +1,12 @@
+PASS A signup and empty home Real Chromium signup; service home has no empty child card
+PASS A school lifecycle and privacy Customer request, quote acceptance and child profile clicked in Chromium; owner approval, route and activation persisted; other customer denied
+PASS C parent and student leave Parent REQUESTED; student required guardian confirmation; fixed fee unchanged
+DRIVER_DEBUG {"statuses":[],"runs":[{"id":"6af9e3d0b2c56f33e4ada981","routeId":"6af9e3cc07eb978bec7b3346","routeName":"Fictitious School Route","school":"Fictitious School","date":"2026-11-15","session":"morning","status":"ACTIVE","driverId":"6af9e3be05b8210492a24af8","startedAt":"2026-11-15T16:54:40.347Z","reports":[],"roster":[{"id":"6af9e3cc07eb978bec7b3310","name":"Fictitious Child","stop":"Test Colony Gate","status":null,"confirmedAt":null,"leaveStatus":null,"events":[]}]}]}
+locator.waitFor: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByText('Morning run started.') to be visible
+
+    at C:\Users\ajaym\Desktop\saferidekids\scripts\prompt23-e2e.mjs:105:54 {
+  log: [ "  - waiting for getByText('Morning run started.') to be visible" ],
+  name: 'TimeoutError'
+}
